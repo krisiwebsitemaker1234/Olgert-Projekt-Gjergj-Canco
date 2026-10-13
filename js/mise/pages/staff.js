@@ -144,7 +144,11 @@
   M.ready(function () {
     render();
     $(document).on('mise:data', render);
-    M.onSearch(function (v) { q = v; render(); });
+    $('#team-search').on('input', function () { q = $.trim($(this).val()); render(); });
+    if (M.param('q')) {
+      q = M.param('q'); $('#team-search').val(q); render();
+      M.flash($('#team tr').first()[0]);
+    }
     $('#add-person').on('click', function () { editPerson(null); });
     $(document).on('click', '[data-edit]', function () { editPerson(M.staffMember($(this).data('edit'))); });
     $(document).on('click', '[data-del]', function () {

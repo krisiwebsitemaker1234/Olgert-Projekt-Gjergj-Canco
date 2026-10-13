@@ -149,7 +149,10 @@
   M.ready(function () {
     render();
     $(document).on('mise:data', render);
-    M.onSearch(function (q) { filter.q = q; $('#dish-search').val(q); render(); });
+    if (M.param('q')) {
+      filter.q = M.param('q'); $('#dish-search').val(filter.q); render();
+      M.flash($('#dishes tr').first()[0]);
+    }
     $('#dish-search').on('input', function () { filter.q = $.trim($(this).val()); render(); });
     $(document).on('click', '[data-cat]', function (e) { e.preventDefault(); filter.cat = $(this).data('cat'); render(); });
     $('#add-dish').on('click', function () { edit(null); });

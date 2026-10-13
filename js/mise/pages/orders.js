@@ -210,7 +210,12 @@
   M.ready(function () {
     render();
     $(document).on('mise:data', render);
-    M.onSearch(function (q) { filter.q = q; $('#order-search').val(q); renderHistory(); });
+    if (M.param('q')) {
+      filter.q = M.param('q'); $('#order-search').val(filter.q); renderHistory();
+      var id = 'o' + filter.q.replace(/\D/g, '');
+      var ticket = $('.mise-ticket[data-id="' + id + '"]')[0];
+      M.flash(ticket || $('#history tr').first()[0]);
+    }
 
     $('#new-order').on('click', function () { openEditor(null); });
     $(document).on('click', '[data-advance]', function () { advance($(this).data('advance')); });

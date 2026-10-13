@@ -113,7 +113,7 @@
     $('#customer-search').val(q);
     render();
     $(document).on('mise:data', render);
-    M.onSearch(function (v) { q = v; $('#customer-search').val(v); render(); });
+    if (q) M.flash($('#customers tr').first()[0]);
     $('#customer-search').on('input', function () { q = $.trim($(this).val()); render(); });
     $('#sort').on('change', function () { sort = $(this).val(); render(); });
     $('#add-customer').on('click', function () { edit(null); });

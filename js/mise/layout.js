@@ -64,9 +64,9 @@
       '        </div>' +
       '      </li>' +
       '      <li class="nav-item d-none d-lg-block"><div class="input-group date navbar-date-picker mise-today"><span class="input-group-addon input-group-prepend border-right"><span class="icon-calendar input-group-text calendar-icon"></span></span><span class="form-control" data-mise-today></span></div></li>' +
-      '      <li class="nav-item"><form class="search-form" action="#" id="mise-search"><i class="icon-search"></i><input type="search" class="form-control" placeholder="Search" title="Search"></form></li>' +
-      '      <li class="nav-item"><a class="nav-link count-indicator mise-github" href="' + R + 'files/Mise-Lista-e-funksioneve.pdf" target="_blank" rel="noopener" title="Lista e funksioneve (PDF)" aria-label="Lista e funksioneve (PDF)"><i class="mdi mdi-file-pdf"></i></a></li>' +
-      '      <li class="nav-item"><a class="nav-link count-indicator mise-github" href="' + REPO_URL + '" target="_blank" rel="noopener" title="Source code on GitHub" aria-label="Source code on GitHub"><i class="mdi mdi-github-circle"></i></a></li>' +
+      '      <li class="nav-item"><a class="nav-link count-indicator mise-search-btn" href="#" id="mise-search-open" title="Search (Ctrl+K)" aria-label="Search"><i class="icon-search"></i><span class="mise-search-hint d-none d-xl-inline">Search<kbd>Ctrl K</kbd></span></a></li>' +
+      '      <li class="nav-item d-none d-sm-block"><a class="nav-link count-indicator mise-github" href="' + R + 'files/Mise-Lista-e-funksioneve.pdf" target="_blank" rel="noopener" title="Lista e funksioneve (PDF)" aria-label="Lista e funksioneve (PDF)"><i class="mdi mdi-file-pdf"></i></a></li>' +
+      '      <li class="nav-item d-none d-sm-block"><a class="nav-link count-indicator mise-github" href="' + REPO_URL + '" target="_blank" rel="noopener" title="Source code on GitHub" aria-label="Source code on GitHub"><i class="mdi mdi-github-circle"></i></a></li>' +
       '      <li class="nav-item dropdown">' +
       '        <a class="nav-link count-indicator" id="messagesDropdown" href="#" data-bs-toggle="dropdown" aria-label="Messages"><i class="icon-mail icon-lg"></i><span class="count d-none" data-mise-msg-dot></span></a>' +
       '        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messagesDropdown" data-mise-messages></div>' +
@@ -106,6 +106,11 @@
         (n.badge ? '<span class="mise-nav-badge d-none" data-mise-badge="' + n.badge + '"></span>' : '') +
         '</a></li>';
     });
+    // On phones the top bar has no room for these, so they live at the bottom of the menu.
+    html += '<li class="nav-item nav-category d-sm-none">More</li>' +
+      '<li class="nav-item d-sm-none"><a class="nav-link" href="' + R + 'files/Mise-Lista-e-funksioneve.pdf" target="_blank" rel="noopener"><i class="mdi mdi-file-pdf menu-icon"></i><span class="menu-title">Feature list (PDF)</span></a></li>' +
+      '<li class="nav-item d-sm-none"><a class="nav-link" href="' + REPO_URL + '" target="_blank" rel="noopener"><i class="mdi mdi-github-circle menu-icon"></i><span class="menu-title">GitHub</span></a></li>' +
+      '<li class="nav-item d-sm-none"><a class="nav-link" href="' + R + 'pages/samples/login.html?signout=1"><i class="mdi mdi-logout menu-icon"></i><span class="menu-title">Sign out</span></a></li>';
     return html + '</ul></nav>';
   }
 
@@ -126,17 +131,17 @@
   fill('footer', footerHtml());
   window.MiseTheme.apply();
 
-  /* ---------- search ---------- */
-
-  $(document).on('submit', '#mise-search', function (e) {
-    e.preventDefault();
-    var q = $.trim($(this).find('input').val());
-    if (M._search) M._search(q);
-    else location.href = R + 'pages/customers/customers.html?q=' + encodeURIComponent(q);
-  });
-  $(document).on('input', '#mise-search input', function () {
-    if (M._search) M._search($.trim($(this).val()));
-  });
+  // The navbar heading is hidden below 992px, so phones and tablets get the title at the top of the page instead.
+  (function () {
+    var content = document.querySelector('.content-wrapper');
+    if (!content) return;
+    var el = document.createElement('div');
+    el.className = 'mise-mobile-title d-lg-none';
+    el.innerHTML = pageTitle
+      ? '<h2>' + esc(pageTitle) + '</h2>' + (pageSub ? '<p>' + esc(pageSub) + '</p>' : '')
+      : '<h2><span data-mise-greeting>Hello</span>, <span data-mise-username></span></h2><p data-mise-sub-mobile></p>';
+    content.insertBefore(el, content.firstChild);
+  })();
 
   /* ---------- data-driven bits (names, alerts, badges) ---------- */
 
@@ -168,7 +173,7 @@
     $('[data-mise-useravatar-lg]').html(M.userAvatar('img-md'));
     $('[data-mise-restaurant]').text(d.restaurant.name);
     $('[data-mise-today]').text(M.fmtDate(M.today(), { weekday: 'short', month: 'short', day: 'numeric' }));
-    if (!pageTitle) $('[data-mise-sub]').text('Here\'s how ' + d.restaurant.name + ' is doing today');
+    if (!pageTitle) $('[data-mise-sub], [data-mise-sub-mobile]').text('Here\'s how ' + d.restaurant.name + ' is doing today');
     document.title = (pageTitle ? pageTitle + ' · ' : '') + 'Mise — ' + d.restaurant.name;
 
     var msgs = d.messages || [];
@@ -238,6 +243,25 @@
     }
   }
 
-  $(document).on('mise:loaded', function () { renderLoadState(); renderChrome(); });
+  /* ---------- tables become cards on phones ---------- */
+
+  // Each cell gets its column name, so CSS can show "Price: $14" when the table is stacked on small screens.
+  function labelTables(root) {
+    var sel = 'table.mise-table, table.select-table';
+    $(root).find(sel).addBack(sel).not('.mise-no-stack').each(function () {
+      var heads = $(this).find('thead th').map(function () { return $.trim($(this).text()); }).get();
+      if (!heads.length) return;
+      $(this).addClass('mise-stackable').find('tbody tr').each(function () {
+        $(this).children('td').each(function (i) { if (heads[i]) this.setAttribute('data-label', heads[i]); });
+      });
+    });
+  }
+  if (window.MutationObserver) {
+    new MutationObserver(function (records) {
+      records.forEach(function (r) { if (r.target.tagName === 'TBODY' || $(r.target).find('tbody').length) labelTables(r.target.closest ? (r.target.closest('table') || r.target) : r.target); });
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+
+  $(document).on('mise:loaded', function () { renderLoadState(); renderChrome(); labelTables(document); });
   $(document).on('mise:data mise:chrome', renderChrome);
 })(window, document, jQuery);

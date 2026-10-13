@@ -21,8 +21,7 @@
     data: null,
     state: { needsImport: false, sourceChanged: null },
     _ready: [],
-    _charts: {},
-    _search: null
+    _charts: {}
   };
 
   /* ---------- storage ---------- */
@@ -413,7 +412,7 @@
     if (modalEl) return;
     modalEl = $(
       '<div class="modal fade mise-modal" id="mise-modal" tabindex="-1" aria-hidden="true">' +
-      '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content">' +
+      '<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down"><div class="modal-content">' +
       '<div class="modal-header"><h5 class="modal-title"></h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>' +
       '<div class="modal-body"></div>' +
       '<div class="modal-footer"><span class="me-auto mise-modal-extra"></span>' +
@@ -430,6 +429,8 @@
     ensureModal();
     var $m = $(modalEl);
     $m.find('.modal-dialog').removeClass('modal-lg modal-sm').addClass(opts.size ? 'modal-' + opts.size : '');
+    // Small confirm dialogs stay as a centred box on phones; forms take the whole screen.
+    $m.find('.modal-dialog').toggleClass('modal-fullscreen-sm-down', opts.size !== 'sm' && !opts.danger);
     $m.find('.modal-title').text(opts.title || '');
     $m.find('.modal-body').html(opts.body || '');
     $m.find('.mise-modal-extra').html(opts.extra || '');
@@ -580,7 +581,16 @@
     }).join('') + '</ul></div>';
   };
 
-  Mise.onSearch = function (fn) { Mise._search = fn; };
+  // Read a query-string value, e.g. pages/menu/menu.html?q=burrata (used by search results).
+  Mise.param = function (name) { return new URLSearchParams(location.search).get(name) || ''; };
+
+  // Briefly highlight an element that a search result pointed to.
+  Mise.flash = function (el) {
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.classList.add('mise-hit');
+    setTimeout(function () { el.classList.remove('mise-hit'); }, 2400);
+  };
 
   /* ---------- boot ---------- */
 

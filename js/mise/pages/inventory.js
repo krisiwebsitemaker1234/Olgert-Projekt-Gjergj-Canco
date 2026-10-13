@@ -74,7 +74,10 @@
   }
 
   function renderSuppliers() {
-    $('#suppliers').html(M.data.suppliers.map(function (s) {
+    var sq = filter.q.toLowerCase();
+    $('#suppliers').html(M.data.suppliers.filter(function (s) {
+      return !sq || (s.name + ' ' + s.contact + ' ' + s.category).toLowerCase().indexOf(sq) > -1;
+    }).map(function (s) {
       var items = M.data.inventory.filter(function (i) { return i.supplierId === s.id; }).length;
       return '<tr><td><h6>' + esc(s.name) + '</h6><p>' + esc(s.category) + ' · ' + items + ' items</p></td>' +
         '<td>' + esc(s.contact) + '<p>' + esc(s.email) + '</p></td><td>' + esc(s.phone) + '</td><td>' + esc(s.deliveryDays) + '</td>' +
@@ -159,7 +162,12 @@
   M.ready(function () {
     render();
     $(document).on('mise:data', render);
-    M.onSearch(function (q) { filter.q = q; tab = 'stock'; $('#stock-search').val(q); render(); });
+    if (M.param('tab')) { tab = M.param('tab'); }
+    if (M.param('q')) { filter.q = M.param('q'); $('#stock-search').val(filter.q); }
+    if (M.param('tab') || M.param('q')) {
+      render();
+      M.flash($((tab === 'suppliers' ? '#suppliers' : '#stock') + ' tr').first()[0]);
+    }
     $(document).on('click', '[data-tab]', function (e) { e.preventDefault(); tab = $(this).data('tab'); render(); });
     $('#stock-search').on('input', function () { filter.q = $.trim($(this).val()); renderStock(); });
     $(document).on('change', '#cat-filter', function () { filter.cat = $(this).val(); renderStock(); });

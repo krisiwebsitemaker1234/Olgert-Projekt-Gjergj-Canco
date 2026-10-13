@@ -157,10 +157,12 @@
   M.ready(function () {
     render();
     $(document).on('mise:data', render);
-    M.onSearch(function (q) {
-      q = q.toLowerCase();
-      $('.mise-booking').each(function () { $(this).toggle(!q || $(this).text().toLowerCase().indexOf(q) > -1); });
-    });
+    if (/^\d{4}-\d{2}-\d{2}$/.test(M.param('date'))) { day = M.param('date'); render(); }
+    if (M.param('q')) {
+      var needle = M.param('q').toLowerCase();
+      var hit = $('.mise-booking, #waitlist .mise-list-row').filter(function () { return $(this).text().toLowerCase().indexOf(needle) > -1; })[0];
+      M.flash(hit);
+    }
     $('#day').on('change', function () { if (this.value) { day = this.value; render(); } });
     $('#prev-day').on('click', function () { day = M.addDays(day, -1); render(); });
     $('#next-day').on('click', function () { day = M.addDays(day, 1); render(); });

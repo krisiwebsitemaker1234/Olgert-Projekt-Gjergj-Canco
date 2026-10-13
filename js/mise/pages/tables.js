@@ -192,6 +192,10 @@
     $(document).on('mise:data', render);
     $(document).on('click', '[data-table]', function () { openTable($(this).data('table')); });
     $('#add-table').on('click', function () { editTable(null); });
+    if (M.param('focus') && M.find(M.data.tables, M.param('focus'))) {
+      M.flash($('[data-table="' + M.param('focus') + '"]')[0]);
+      openTable(M.param('focus'));
+    }
     $('#reset-floor').on('click', function () {
       M.confirm('Mark every table as free? Use this at the end of service.', function () {
         M.update(function (d) { d.tables.forEach(function (t) { t.status = 'free'; t.guests = 0; t.server = null; t.seatedAt = null; }); });
