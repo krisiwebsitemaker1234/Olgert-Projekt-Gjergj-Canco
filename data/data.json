@@ -1,0 +1,4731 @@
+{
+  "meta": {
+    "app": "Mise",
+    "version": 1,
+    "anchorDate": "2026-10-13",
+    "keepDatesCurrent": true
+  },
+  "restaurant": {
+    "name": "Ember & Oak",
+    "tagline": "Wood-fired bistro",
+    "currency": "$",
+    "locale": "en-US",
+    "taxRate": 8.5,
+    "serviceCharge": 12.5,
+    "serviceChargeMinParty": 6,
+    "address": "14 Mill Lane, Riverside",
+    "phone": "+1 555 0100",
+    "email": "hello@emberandoak.example",
+    "capacity": 60,
+    "avgDiningMinutes": 90,
+    "targetFoodCostPct": 30,
+    "targetLaborCostPct": 30,
+    "hours": [
+      {
+        "day": "Monday",
+        "closed": true,
+        "open": "",
+        "close": ""
+      },
+      {
+        "day": "Tuesday",
+        "closed": false,
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "day": "Wednesday",
+        "closed": false,
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "day": "Thursday",
+        "closed": false,
+        "open": "12:00",
+        "close": "23:00"
+      },
+      {
+        "day": "Friday",
+        "closed": false,
+        "open": "12:00",
+        "close": "23:30"
+      },
+      {
+        "day": "Saturday",
+        "closed": false,
+        "open": "11:30",
+        "close": "23:30"
+      },
+      {
+        "day": "Sunday",
+        "closed": false,
+        "open": "11:30",
+        "close": "21:00"
+      }
+    ]
+  },
+  "user": {
+    "name": "Admin",
+    "role": "Administrator",
+    "email": "admin@emberandoak.example",
+    "phone": "",
+    "username": "admin",
+    "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "prefs": {
+      "startPage": "index.html",
+      "overviewPeriod": "today",
+      "revenueRange": 14,
+      "lateMinutes": 25,
+      "alerts": {
+        "stock": true,
+        "menu": true,
+        "waitlist": true,
+        "website": true
+      },
+      "toasts": true
+    }
+  },
+  "menu": {
+    "categories": [
+      "Starters",
+      "Wood-fired",
+      "Mains",
+      "Sides",
+      "Desserts",
+      "Drinks"
+    ],
+    "items": [
+      {
+        "id": "m1",
+        "name": "Burrata & charred peaches",
+        "category": "Starters",
+        "price": 14,
+        "cost": 4.6,
+        "description": "Basil oil, toasted hazelnuts, sourdough",
+        "tags": [
+          "v"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 205
+      },
+      {
+        "id": "m2",
+        "name": "Smoked beef tartare",
+        "category": "Starters",
+        "price": 16,
+        "cost": 5.9,
+        "description": "Cured yolk, capers, rye crisps",
+        "tags": [],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 117
+      },
+      {
+        "id": "m3",
+        "name": "Grilled octopus",
+        "category": "Starters",
+        "price": 17,
+        "cost": 6.4,
+        "description": "Romesco, crispy potatoes, lemon",
+        "tags": [
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 242
+      },
+      {
+        "id": "m4",
+        "name": "Charred broccolini",
+        "category": "Starters",
+        "price": 12,
+        "cost": 3.1,
+        "description": "Whipped feta, chilli, almonds",
+        "tags": [
+          "v",
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 64
+      },
+      {
+        "id": "m5",
+        "name": "Soup of the day",
+        "category": "Starters",
+        "price": 9,
+        "cost": 2.2,
+        "description": "Ask your server",
+        "tags": [
+          "v"
+        ],
+        "available": false,
+        "onWebsite": true,
+        "soldLast30": 77
+      },
+      {
+        "id": "m6",
+        "name": "Margherita",
+        "category": "Wood-fired",
+        "price": 15,
+        "cost": 3.4,
+        "description": "San Marzano, fior di latte, basil",
+        "tags": [
+          "v"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 314
+      },
+      {
+        "id": "m7",
+        "name": "Nduja & honey",
+        "category": "Wood-fired",
+        "price": 18,
+        "cost": 4.7,
+        "description": "Spicy nduja, mozzarella, hot honey",
+        "tags": [],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 88
+      },
+      {
+        "id": "m8",
+        "name": "Wild mushroom",
+        "category": "Wood-fired",
+        "price": 18,
+        "cost": 4.9,
+        "description": "Truffle cream, taleggio, thyme",
+        "tags": [
+          "v"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 227
+      },
+      {
+        "id": "m9",
+        "name": "Ember-roasted half chicken",
+        "category": "Mains",
+        "price": 26,
+        "cost": 7.8,
+        "description": "Salsa verde, charred lemon, jus",
+        "tags": [
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 69
+      },
+      {
+        "id": "m10",
+        "name": "Dry-aged ribeye 300g",
+        "category": "Mains",
+        "price": 42,
+        "cost": 16.5,
+        "description": "Bone marrow butter, watercress",
+        "tags": [
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 188
+      },
+      {
+        "id": "m11",
+        "name": "Market fish",
+        "category": "Mains",
+        "price": 31,
+        "cost": 11.2,
+        "description": "Brown butter, capers, samphire",
+        "tags": [
+          "gf"
+        ],
+        "available": false,
+        "onWebsite": true,
+        "soldLast30": 149
+      },
+      {
+        "id": "m12",
+        "name": "Pork belly",
+        "category": "Mains",
+        "price": 27,
+        "cost": 7.1,
+        "description": "Apple, black pudding, cider glaze",
+        "tags": [],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 59
+      },
+      {
+        "id": "m13",
+        "name": "Hand-rolled pappardelle",
+        "category": "Mains",
+        "price": 23,
+        "cost": 5.3,
+        "description": "Slow-cooked lamb ragù, pecorino",
+        "tags": [],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 84
+      },
+      {
+        "id": "m14",
+        "name": "Squash risotto",
+        "category": "Mains",
+        "price": 21,
+        "cost": 4.4,
+        "description": "Sage brown butter, pumpkin seeds",
+        "tags": [
+          "v",
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 262
+      },
+      {
+        "id": "m15",
+        "name": "Triple-cooked chips",
+        "category": "Sides",
+        "price": 6,
+        "cost": 1.1,
+        "description": "Rosemary salt, aioli",
+        "tags": [
+          "v",
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 257
+      },
+      {
+        "id": "m16",
+        "name": "Green leaves",
+        "category": "Sides",
+        "price": 6,
+        "cost": 1.3,
+        "description": "Shallot vinaigrette",
+        "tags": [
+          "vg",
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 167
+      },
+      {
+        "id": "m17",
+        "name": "Roast carrots",
+        "category": "Sides",
+        "price": 7,
+        "cost": 1.6,
+        "description": "Harissa yoghurt, dukkah",
+        "tags": [
+          "v",
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 211
+      },
+      {
+        "id": "m18",
+        "name": "Burnt basque cheesecake",
+        "category": "Desserts",
+        "price": 10,
+        "cost": 2.6,
+        "description": "Poached quince",
+        "tags": [
+          "v"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 86
+      },
+      {
+        "id": "m19",
+        "name": "Dark chocolate pot",
+        "category": "Desserts",
+        "price": 9,
+        "cost": 2.2,
+        "description": "Olive oil, sea salt, sourdough crisp",
+        "tags": [
+          "v"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 257
+      },
+      {
+        "id": "m20",
+        "name": "Affogato",
+        "category": "Desserts",
+        "price": 7,
+        "cost": 1.5,
+        "description": "Vanilla gelato, espresso",
+        "tags": [
+          "v",
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 70
+      },
+      {
+        "id": "m21",
+        "name": "Seasonal sorbet",
+        "category": "Desserts",
+        "price": 7,
+        "cost": 1.4,
+        "description": "Three scoops",
+        "tags": [
+          "vg",
+          "gf"
+        ],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 103
+      },
+      {
+        "id": "m22",
+        "name": "House red (glass)",
+        "category": "Drinks",
+        "price": 9,
+        "cost": 2.4,
+        "description": "Montepulciano d'Abruzzo",
+        "tags": [
+          "vg"
+        ],
+        "available": true,
+        "onWebsite": false,
+        "soldLast30": 154
+      },
+      {
+        "id": "m23",
+        "name": "House white (glass)",
+        "category": "Drinks",
+        "price": 9,
+        "cost": 2.3,
+        "description": "Pinot Grigio delle Venezie",
+        "tags": [
+          "vg"
+        ],
+        "available": true,
+        "onWebsite": false,
+        "soldLast30": 71
+      },
+      {
+        "id": "m24",
+        "name": "Negroni",
+        "category": "Drinks",
+        "price": 12,
+        "cost": 2.8,
+        "description": "Gin, Campari, sweet vermouth",
+        "tags": [],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 243
+      },
+      {
+        "id": "m25",
+        "name": "Smoked old fashioned",
+        "category": "Drinks",
+        "price": 13,
+        "cost": 3.0,
+        "description": "Bourbon, oak smoke, orange",
+        "tags": [],
+        "available": true,
+        "onWebsite": true,
+        "soldLast30": 65
+      },
+      {
+        "id": "m26",
+        "name": "Draught lager",
+        "category": "Drinks",
+        "price": 6,
+        "cost": 1.5,
+        "description": "Local pilsner, 500ml",
+        "tags": [
+          "vg"
+        ],
+        "available": true,
+        "onWebsite": false,
+        "soldLast30": 153
+      },
+      {
+        "id": "m27",
+        "name": "Sparkling water 750ml",
+        "category": "Drinks",
+        "price": 4,
+        "cost": 0.6,
+        "description": "",
+        "tags": [
+          "vg"
+        ],
+        "available": true,
+        "onWebsite": false,
+        "soldLast30": 63
+      },
+      {
+        "id": "m28",
+        "name": "Espresso",
+        "category": "Drinks",
+        "price": 3,
+        "cost": 0.4,
+        "description": "",
+        "tags": [
+          "vg"
+        ],
+        "available": true,
+        "onWebsite": false,
+        "soldLast30": 108
+      }
+    ]
+  },
+  "tables": [
+    {
+      "id": "T1",
+      "name": "T1",
+      "area": "Main room",
+      "seats": 2,
+      "status": "ordered",
+      "guests": 2,
+      "server": "s6",
+      "seatedAt": "2026-10-13T18:35"
+    },
+    {
+      "id": "T2",
+      "name": "T2",
+      "area": "Main room",
+      "seats": 2,
+      "status": "free",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    },
+    {
+      "id": "T3",
+      "name": "T3",
+      "area": "Main room",
+      "seats": 4,
+      "status": "eating",
+      "guests": 3,
+      "server": "s6",
+      "seatedAt": "2026-10-13T17:55"
+    },
+    {
+      "id": "T4",
+      "name": "T4",
+      "area": "Main room",
+      "seats": 4,
+      "status": "cleaning",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    },
+    {
+      "id": "T5",
+      "name": "T5",
+      "area": "Main room",
+      "seats": 4,
+      "status": "reserved",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    },
+    {
+      "id": "T6",
+      "name": "T6",
+      "area": "Main room",
+      "seats": 6,
+      "status": "eating",
+      "guests": 4,
+      "server": "s7",
+      "seatedAt": "2026-10-13T18:15"
+    },
+    {
+      "id": "T7",
+      "name": "T7",
+      "area": "Main room",
+      "seats": 6,
+      "status": "reserved",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    },
+    {
+      "id": "T8",
+      "name": "T8",
+      "area": "Main room",
+      "seats": 8,
+      "status": "ordered",
+      "guests": 6,
+      "server": "s7",
+      "seatedAt": "2026-10-13T18:40"
+    },
+    {
+      "id": "P1",
+      "name": "P1",
+      "area": "Terrace",
+      "seats": 2,
+      "status": "free",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    },
+    {
+      "id": "P2",
+      "name": "P2",
+      "area": "Terrace",
+      "seats": 4,
+      "status": "eating",
+      "guests": 2,
+      "server": "s8",
+      "seatedAt": "2026-10-13T18:30"
+    },
+    {
+      "id": "P3",
+      "name": "P3",
+      "area": "Terrace",
+      "seats": 4,
+      "status": "ordered",
+      "guests": 3,
+      "server": "s8",
+      "seatedAt": "2026-10-13T18:47"
+    },
+    {
+      "id": "P4",
+      "name": "P4",
+      "area": "Terrace",
+      "seats": 6,
+      "status": "free",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    },
+    {
+      "id": "B1",
+      "name": "B1",
+      "area": "Bar",
+      "seats": 2,
+      "status": "eating",
+      "guests": 1,
+      "server": "s9",
+      "seatedAt": "2026-10-13T18:44"
+    },
+    {
+      "id": "B2",
+      "name": "B2",
+      "area": "Bar",
+      "seats": 2,
+      "status": "bill",
+      "guests": 2,
+      "server": "s9",
+      "seatedAt": "2026-10-13T18:05"
+    },
+    {
+      "id": "B3",
+      "name": "B3",
+      "area": "Bar",
+      "seats": 2,
+      "status": "free",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    },
+    {
+      "id": "B4",
+      "name": "B4",
+      "area": "Bar",
+      "seats": 2,
+      "status": "free",
+      "guests": 0,
+      "server": null,
+      "seatedAt": null
+    }
+  ],
+  "orders": [
+    {
+      "id": "o2030",
+      "table": "P4",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s6",
+      "createdAt": "2026-10-13T12:06",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m19",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m5",
+          "qty": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2031",
+      "table": "T2",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s9",
+      "createdAt": "2026-10-13T12:07",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m6",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m25",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m11",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m5",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m16",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2032",
+      "table": "T3",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s8",
+      "createdAt": "2026-10-13T12:13",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m5",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m23",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m18",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m1",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2033",
+      "table": "B4",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s7",
+      "createdAt": "2026-10-13T12:35",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m19",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m2",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2034",
+      "table": "T8",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s7",
+      "createdAt": "2026-10-13T13:09",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m6",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m5",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2035",
+      "table": "P3",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s8",
+      "createdAt": "2026-10-13T13:16",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m1",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m5",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m14",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m18",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2036",
+      "table": "T4",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s7",
+      "createdAt": "2026-10-13T13:34",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m19",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m10",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2037",
+      "table": "B4",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s8",
+      "createdAt": "2026-10-13T13:39",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m5",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m21",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m9",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m12",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m20",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2038",
+      "table": "B4",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s6",
+      "createdAt": "2026-10-13T13:45",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m22",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m12",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m1",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m15",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m6",
+          "qty": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2039",
+      "table": "T2",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s6",
+      "createdAt": "2026-10-13T17:04",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m9",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m16",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2040",
+      "table": "P1",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s8",
+      "createdAt": "2026-10-13T17:19",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m5",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m4",
+          "qty": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2041",
+      "table": "T3",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s7",
+      "createdAt": "2026-10-13T17:25",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m4",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m16",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m21",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m13",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m2",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2042",
+      "table": "T5",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s8",
+      "createdAt": "2026-10-13T17:25",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m3",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m6",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m15",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m13",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m18",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2043",
+      "table": "T3",
+      "type": "dine-in",
+      "status": "paid",
+      "server": "s7",
+      "createdAt": "2026-10-13T17:37",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m12",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m10",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m8",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m26",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m6",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2044",
+      "table": "T3",
+      "type": "dine-in",
+      "status": "served",
+      "server": "s6",
+      "createdAt": "2026-10-13T18:02",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m1",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m9",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m13",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m22",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2045",
+      "table": "B2",
+      "type": "dine-in",
+      "status": "served",
+      "server": "s9",
+      "createdAt": "2026-10-13T18:10",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m24",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m15",
+          "qty": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2046",
+      "table": "T6",
+      "type": "dine-in",
+      "status": "preparing",
+      "server": "s7",
+      "createdAt": "2026-10-13T18:24",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m2",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m3",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m10",
+          "qty": 2,
+          "note": "1 medium, 1 well done"
+        },
+        {
+          "itemId": "m15",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m21",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m22",
+          "qty": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2047",
+      "table": null,
+      "type": "takeaway",
+      "status": "ready",
+      "server": null,
+      "createdAt": "2026-10-13T18:31",
+      "customer": "Leo M.",
+      "items": [
+        {
+          "itemId": "m6",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m7",
+          "qty": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2048",
+      "table": "P2",
+      "type": "dine-in",
+      "status": "preparing",
+      "server": "s8",
+      "createdAt": "2026-10-13T18:35",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m4",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m14",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m12",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m23",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2049",
+      "table": "T1",
+      "type": "dine-in",
+      "status": "new",
+      "server": "s6",
+      "createdAt": "2026-10-13T18:41",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m8",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m16",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m27",
+          "qty": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2050",
+      "table": null,
+      "type": "delivery",
+      "status": "preparing",
+      "server": null,
+      "createdAt": "2026-10-13T18:43",
+      "customer": "Leo M.",
+      "items": [
+        {
+          "itemId": "m7",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m15",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m19",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2051",
+      "table": "T8",
+      "type": "dine-in",
+      "status": "new",
+      "server": "s7",
+      "createdAt": "2026-10-13T18:46",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m1",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m2",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m9",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m10",
+          "qty": 1,
+          "note": "Medium rare"
+        },
+        {
+          "itemId": "m13",
+          "qty": 2,
+          "note": ""
+        },
+        {
+          "itemId": "m22",
+          "qty": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2052",
+      "table": "B1",
+      "type": "dine-in",
+      "status": "ready",
+      "server": "s9",
+      "createdAt": "2026-10-13T18:48",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m25",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m26",
+          "qty": 1,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "o2053",
+      "table": "P3",
+      "type": "dine-in",
+      "status": "new",
+      "server": "s8",
+      "createdAt": "2026-10-13T18:52",
+      "customer": null,
+      "items": [
+        {
+          "itemId": "m6",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m11",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m17",
+          "qty": 1,
+          "note": ""
+        },
+        {
+          "itemId": "m23",
+          "qty": 2,
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "reservations": [
+    {
+      "id": "r1",
+      "name": "Olivia Bennett",
+      "customerId": "c1",
+      "phone": "+1 555 2645 9873",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "12:30",
+      "table": "T2",
+      "status": "completed",
+      "notes": ""
+    },
+    {
+      "id": "r2",
+      "name": "Marcus Reyes",
+      "customerId": "c2",
+      "phone": "+1 555 2925 4922",
+      "partySize": 4,
+      "date": "2026-10-13",
+      "time": "13:00",
+      "table": "T4",
+      "status": "completed",
+      "notes": ""
+    },
+    {
+      "id": "r3",
+      "name": "Sofia Novak",
+      "customerId": "c3",
+      "phone": "+1 555 2630 9073",
+      "partySize": 3,
+      "date": "2026-10-13",
+      "time": "17:30",
+      "table": "T3",
+      "status": "seated",
+      "notes": ""
+    },
+    {
+      "id": "r4",
+      "name": "Ethan Clarke",
+      "customerId": "c4",
+      "phone": "+1 555 2583 5246",
+      "partySize": 4,
+      "date": "2026-10-13",
+      "time": "18:00",
+      "table": "T6",
+      "status": "seated",
+      "notes": ""
+    },
+    {
+      "id": "r5",
+      "name": "Amara Osei",
+      "customerId": "c5",
+      "phone": "+1 555 2927 6726",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "18:30",
+      "table": "P2",
+      "status": "seated",
+      "notes": ""
+    },
+    {
+      "id": "r6",
+      "name": "Noah Kim",
+      "customerId": "c6",
+      "phone": "+1 555 2204 4716",
+      "partySize": 6,
+      "date": "2026-10-13",
+      "time": "18:45",
+      "table": "T8",
+      "status": "seated",
+      "notes": ""
+    },
+    {
+      "id": "r7",
+      "name": "Isla Moreau",
+      "customerId": "c7",
+      "phone": "+1 555 2739 1031",
+      "partySize": 4,
+      "date": "2026-10-13",
+      "time": "19:00",
+      "table": "T5",
+      "status": "confirmed",
+      "notes": "High chair needed"
+    },
+    {
+      "id": "r8",
+      "name": "Lucas Silva",
+      "customerId": "c8",
+      "phone": "+1 555 2954 2964",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "19:15",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r9",
+      "name": "Zara Ahmed",
+      "customerId": "c9",
+      "phone": "+1 555 2282 8109",
+      "partySize": 6,
+      "date": "2026-10-13",
+      "time": "19:30",
+      "table": "T7",
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r10",
+      "name": "Henry Walsh",
+      "customerId": "c10",
+      "phone": "+1 555 2574 7576",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "19:30",
+      "table": "P1",
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r11",
+      "name": "Mila Rossi",
+      "customerId": "c11",
+      "phone": "+1 555 2230 1451",
+      "partySize": 4,
+      "date": "2026-10-13",
+      "time": "20:00",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r12",
+      "name": "Theo Larsen",
+      "customerId": "c12",
+      "phone": "+1 555 2726 8771",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "20:15",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r13",
+      "name": "Ava Doyle",
+      "customerId": "c13",
+      "phone": "+1 555 2661 3146",
+      "partySize": 8,
+      "date": "2026-10-13",
+      "time": "20:30",
+      "table": null,
+      "status": "confirmed",
+      "notes": "Birthday dinner — cake at 22:00"
+    },
+    {
+      "id": "r14",
+      "name": "Kai Haddad",
+      "customerId": "c14",
+      "phone": "+1 555 2867 3281",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "21:00",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r15",
+      "name": "Elena Park",
+      "customerId": "c15",
+      "phone": "+1 555 2128 5126",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "19:00",
+      "table": null,
+      "status": "waitlist",
+      "notes": ""
+    },
+    {
+      "id": "r16",
+      "name": "Omar Quinn",
+      "customerId": "c16",
+      "phone": "+1 555 2365 9918",
+      "partySize": 3,
+      "date": "2026-10-13",
+      "time": "19:20",
+      "table": null,
+      "status": "waitlist",
+      "notes": ""
+    },
+    {
+      "id": "r17",
+      "name": "Freya Varga",
+      "customerId": "c17",
+      "phone": "+1 555 2569 9466",
+      "partySize": 2,
+      "date": "2026-10-13",
+      "time": "13:30",
+      "table": null,
+      "status": "no-show",
+      "notes": ""
+    },
+    {
+      "id": "r18",
+      "name": "Freya Varga",
+      "customerId": "c17",
+      "phone": "+1 555 2569 9466",
+      "partySize": 4,
+      "date": "2026-10-14",
+      "time": "20:00",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r19",
+      "name": "Olivia Bennett",
+      "customerId": "c1",
+      "phone": "+1 555 2645 9873",
+      "partySize": 2,
+      "date": "2026-10-14",
+      "time": "19:30",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r20",
+      "name": "Mila Rossi",
+      "customerId": "c11",
+      "phone": "+1 555 2230 1451",
+      "partySize": 4,
+      "date": "2026-10-14",
+      "time": "20:00",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r21",
+      "name": "Felix Hughes",
+      "customerId": "c20",
+      "phone": "+1 555 2584 2971",
+      "partySize": 4,
+      "date": "2026-10-15",
+      "time": "18:30",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r22",
+      "name": "Zara Ahmed",
+      "customerId": "c9",
+      "phone": "+1 555 2282 8109",
+      "partySize": 4,
+      "date": "2026-10-15",
+      "time": "20:00",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r23",
+      "name": "Jasper Ellis",
+      "customerId": "c18",
+      "phone": "+1 555 2644 3487",
+      "partySize": 4,
+      "date": "2026-10-16",
+      "time": "20:00",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r24",
+      "name": "Lucas Silva",
+      "customerId": "c8",
+      "phone": "+1 555 2954 2964",
+      "partySize": 6,
+      "date": "2026-10-17",
+      "time": "20:00",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r25",
+      "name": "Zara Ahmed",
+      "customerId": "c9",
+      "phone": "+1 555 2282 8109",
+      "partySize": 4,
+      "date": "2026-10-17",
+      "time": "18:30",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r26",
+      "name": "Elena Park",
+      "customerId": "c15",
+      "phone": "+1 555 2128 5126",
+      "partySize": 2,
+      "date": "2026-10-18",
+      "time": "19:30",
+      "table": null,
+      "status": "confirmed",
+      "notes": ""
+    },
+    {
+      "id": "r27",
+      "name": "Ethan Clarke",
+      "customerId": "c4",
+      "phone": "+1 555 2583 5246",
+      "partySize": 4,
+      "date": "2026-10-12",
+      "time": "19:30",
+      "table": null,
+      "status": "completed",
+      "notes": ""
+    },
+    {
+      "id": "r28",
+      "name": "Elena Park",
+      "customerId": "c15",
+      "phone": "+1 555 2128 5126",
+      "partySize": 4,
+      "date": "2026-10-12",
+      "time": "19:30",
+      "table": null,
+      "status": "completed",
+      "notes": ""
+    },
+    {
+      "id": "r29",
+      "name": "Sofia Novak",
+      "customerId": "c3",
+      "phone": "+1 555 2630 9073",
+      "partySize": 2,
+      "date": "2026-10-11",
+      "time": "19:30",
+      "table": null,
+      "status": "completed",
+      "notes": ""
+    },
+    {
+      "id": "r30",
+      "name": "Kai Haddad",
+      "customerId": "c14",
+      "phone": "+1 555 2867 3281",
+      "partySize": 2,
+      "date": "2026-10-10",
+      "time": "19:30",
+      "table": null,
+      "status": "completed",
+      "notes": ""
+    },
+    {
+      "id": "r31",
+      "name": "Isla Moreau",
+      "customerId": "c7",
+      "phone": "+1 555 2739 1031",
+      "partySize": 4,
+      "date": "2026-10-10",
+      "time": "19:30",
+      "table": null,
+      "status": "completed",
+      "notes": ""
+    }
+  ],
+  "customers": [
+    {
+      "id": "c1",
+      "name": "Olivia Bennett",
+      "email": "olivia.bennett@mail.example",
+      "phone": "+1 555 2645 9873",
+      "visits": 4,
+      "totalSpent": 484.88,
+      "lastVisit": "2026-09-22",
+      "tags": [],
+      "notes": "Prefers the terrace. Always orders the ribeye."
+    },
+    {
+      "id": "c2",
+      "name": "Marcus Reyes",
+      "email": "marcus.reyes@mail.example",
+      "phone": "+1 555 2925 4922",
+      "visits": 4,
+      "totalSpent": 498.23,
+      "lastVisit": "2026-08-27",
+      "tags": [],
+      "notes": ""
+    },
+    {
+      "id": "c3",
+      "name": "Sofia Novak",
+      "email": "sofia.novak@mail.example",
+      "phone": "+1 555 2630 9073",
+      "visits": 4,
+      "totalSpent": 340.89,
+      "lastVisit": "2026-10-12",
+      "tags": [
+        "regular"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c4",
+      "name": "Ethan Clarke",
+      "email": "ethan.clarke@mail.example",
+      "phone": "+1 555 2583 5246",
+      "visits": 6,
+      "totalSpent": 428.76,
+      "lastVisit": "2026-09-05",
+      "tags": [
+        "allergy: nuts"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c5",
+      "name": "Amara Osei",
+      "email": "amara.osei@mail.example",
+      "phone": "+1 555 2927 6726",
+      "visits": 15,
+      "totalSpent": 2042.63,
+      "lastVisit": "2026-09-20",
+      "tags": [
+        "vip"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c6",
+      "name": "Noah Kim",
+      "email": "noah.kim@mail.example",
+      "phone": "+1 555 2204 4716",
+      "visits": 4,
+      "totalSpent": 379.83,
+      "lastVisit": "2026-09-22",
+      "tags": [],
+      "notes": "Severe nut allergy — flag to kitchen."
+    },
+    {
+      "id": "c7",
+      "name": "Isla Moreau",
+      "email": "isla.moreau@mail.example",
+      "phone": "+1 555 2739 1031",
+      "visits": 15,
+      "totalSpent": 1436.33,
+      "lastVisit": "2026-09-02",
+      "tags": [
+        "allergy: nuts"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c8",
+      "name": "Lucas Silva",
+      "email": "lucas.silva@mail.example",
+      "phone": "+1 555 2954 2964",
+      "visits": 2,
+      "totalSpent": 264.66,
+      "lastVisit": "2026-08-24",
+      "tags": [],
+      "notes": ""
+    },
+    {
+      "id": "c9",
+      "name": "Zara Ahmed",
+      "email": "zara.ahmed@mail.example",
+      "phone": "+1 555 2282 8109",
+      "visits": 15,
+      "totalSpent": 1831.15,
+      "lastVisit": "2026-09-22",
+      "tags": [
+        "vip"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c10",
+      "name": "Henry Walsh",
+      "email": "henry.walsh@mail.example",
+      "phone": "+1 555 2574 7576",
+      "visits": 11,
+      "totalSpent": 1300.03,
+      "lastVisit": "2026-10-08",
+      "tags": [
+        "regular",
+        "wine lover"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c11",
+      "name": "Mila Rossi",
+      "email": "mila.rossi@mail.example",
+      "phone": "+1 555 2230 1451",
+      "visits": 3,
+      "totalSpent": 203.54,
+      "lastVisit": "2026-08-17",
+      "tags": [
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c12",
+      "name": "Theo Larsen",
+      "email": "theo.larsen@mail.example",
+      "phone": "+1 555 2726 8771",
+      "visits": 3,
+      "totalSpent": 332.6,
+      "lastVisit": "2026-09-21",
+      "tags": [
+        "regular",
+        "wine lover"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c13",
+      "name": "Ava Doyle",
+      "email": "ava.doyle@mail.example",
+      "phone": "+1 555 2661 3146",
+      "visits": 23,
+      "totalSpent": 1306.83,
+      "lastVisit": "2026-08-23",
+      "tags": [
+        "vip"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c14",
+      "name": "Kai Haddad",
+      "email": "kai.haddad@mail.example",
+      "phone": "+1 555 2867 3281",
+      "visits": 23,
+      "totalSpent": 2113.1,
+      "lastVisit": "2026-08-19",
+      "tags": [],
+      "notes": ""
+    },
+    {
+      "id": "c15",
+      "name": "Elena Park",
+      "email": "elena.park@mail.example",
+      "phone": "+1 555 2128 5126",
+      "visits": 4,
+      "totalSpent": 292.35,
+      "lastVisit": "2026-09-11",
+      "tags": [],
+      "notes": ""
+    },
+    {
+      "id": "c16",
+      "name": "Omar Quinn",
+      "email": "omar.quinn@mail.example",
+      "phone": "+1 555 2365 9918",
+      "visits": 8,
+      "totalSpent": 724.93,
+      "lastVisit": "2026-10-05",
+      "tags": [
+        "regular"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c17",
+      "name": "Freya Varga",
+      "email": "freya.varga@mail.example",
+      "phone": "+1 555 2569 9466",
+      "visits": 8,
+      "totalSpent": 726.03,
+      "lastVisit": "2026-08-16",
+      "tags": [],
+      "notes": ""
+    },
+    {
+      "id": "c18",
+      "name": "Jasper Ellis",
+      "email": "jasper.ellis@mail.example",
+      "phone": "+1 555 2644 3487",
+      "visits": 3,
+      "totalSpent": 298.49,
+      "lastVisit": "2026-10-12",
+      "tags": [
+        "vegetarian"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c19",
+      "name": "Nina Santos",
+      "email": "nina.santos@mail.example",
+      "phone": "+1 555 2723 1064",
+      "visits": 3,
+      "totalSpent": 362.89,
+      "lastVisit": "2026-10-04",
+      "tags": [
+        "regular",
+        "wine lover"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c20",
+      "name": "Felix Hughes",
+      "email": "felix.hughes@mail.example",
+      "phone": "+1 555 2584 2971",
+      "visits": 3,
+      "totalSpent": 306.9,
+      "lastVisit": "2026-09-23",
+      "tags": [],
+      "notes": ""
+    },
+    {
+      "id": "c21",
+      "name": "Ruby Ito",
+      "email": "ruby.ito@mail.example",
+      "phone": "+1 555 2668 8905",
+      "visits": 23,
+      "totalSpent": 2798.25,
+      "lastVisit": "2026-10-07",
+      "tags": [],
+      "notes": ""
+    },
+    {
+      "id": "c22",
+      "name": "Arjun Kaur",
+      "email": "arjun.kaur@mail.example",
+      "phone": "+1 555 2354 4134",
+      "visits": 1,
+      "totalSpent": 78.54,
+      "lastVisit": "2026-08-25",
+      "tags": [
+        "vip"
+      ],
+      "notes": ""
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rv9",
+      "customerId": "c15",
+      "name": "Elena Park",
+      "rating": 5,
+      "text": "Pappardelle with lamb ragù — I still think about it.",
+      "source": "Website",
+      "date": "2026-10-06",
+      "featured": true
+    },
+    {
+      "id": "rv1",
+      "customerId": "c1",
+      "name": "Olivia Bennett",
+      "rating": 5,
+      "text": "The ribeye was perfect and the terrace at sunset is unbeatable. Our new favourite spot.",
+      "source": "Google",
+      "date": "2026-10-05",
+      "featured": true
+    },
+    {
+      "id": "rv6",
+      "customerId": "c10",
+      "name": "Henry Walsh",
+      "rating": 5,
+      "text": "Grilled octopus was outstanding. Great natural wine list too.",
+      "source": "Instagram",
+      "date": "2026-10-04",
+      "featured": false
+    },
+    {
+      "id": "rv2",
+      "customerId": "c3",
+      "name": "Sofia Novak",
+      "rating": 5,
+      "text": "Best wood-fired pizza in town. The nduja & honey is dangerous.",
+      "source": "Google",
+      "date": "2026-10-03",
+      "featured": true
+    },
+    {
+      "id": "rv4",
+      "customerId": "c7",
+      "name": "Isla Moreau",
+      "rating": 5,
+      "text": "Booked for an anniversary and they made it really special. Cheesecake is a must.",
+      "source": "Website",
+      "date": "2026-10-03",
+      "featured": true
+    },
+    {
+      "id": "rv8",
+      "customerId": "c14",
+      "name": "Kai Haddad",
+      "rating": 2,
+      "text": "Waited 25 minutes past our booking time. Food was great once it arrived.",
+      "source": "Google",
+      "date": "2026-09-28",
+      "featured": false
+    },
+    {
+      "id": "rv5",
+      "customerId": "c9",
+      "name": "Zara Ahmed",
+      "rating": 3,
+      "text": "Food was good but the music was a bit loud for us.",
+      "source": "Google",
+      "date": "2026-09-26",
+      "featured": false
+    },
+    {
+      "id": "rv3",
+      "customerId": "c4",
+      "name": "Ethan Clarke",
+      "rating": 4,
+      "text": "Lovely atmosphere and friendly staff. Mains came out a little slow on a busy Friday.",
+      "source": "TripAdvisor",
+      "date": "2026-09-19",
+      "featured": false
+    },
+    {
+      "id": "rv10",
+      "customerId": "c18",
+      "name": "Jasper Ellis",
+      "rating": 4,
+      "text": "Cosy, warm and the cocktails are excellent.",
+      "source": "Google",
+      "date": "2026-09-17",
+      "featured": false
+    },
+    {
+      "id": "rv7",
+      "customerId": "c12",
+      "name": "Theo Larsen",
+      "rating": 4,
+      "text": "Solid neighbourhood bistro. Will be back for brunch.",
+      "source": "TripAdvisor",
+      "date": "2026-09-13",
+      "featured": false
+    }
+  ],
+  "inventory": [
+    {
+      "id": "i1",
+      "name": "00 pizza flour",
+      "category": "Dry goods",
+      "unit": "kg",
+      "stock": 38,
+      "par": 50,
+      "costPerUnit": 1.4,
+      "supplierId": "sp6"
+    },
+    {
+      "id": "i2",
+      "name": "San Marzano tomatoes",
+      "category": "Dry goods",
+      "unit": "tin",
+      "stock": 22,
+      "par": 30,
+      "costPerUnit": 3.2,
+      "supplierId": "sp6"
+    },
+    {
+      "id": "i3",
+      "name": "Arborio rice",
+      "category": "Dry goods",
+      "unit": "kg",
+      "stock": 9,
+      "par": 10,
+      "costPerUnit": 3.8,
+      "supplierId": "sp6"
+    },
+    {
+      "id": "i4",
+      "name": "Extra virgin olive oil",
+      "category": "Dry goods",
+      "unit": "L",
+      "stock": 6,
+      "par": 12,
+      "costPerUnit": 11.5,
+      "supplierId": "sp6"
+    },
+    {
+      "id": "i5",
+      "name": "Fior di latte",
+      "category": "Dairy",
+      "unit": "kg",
+      "stock": 7,
+      "par": 12,
+      "costPerUnit": 9.8,
+      "supplierId": "sp4"
+    },
+    {
+      "id": "i6",
+      "name": "Burrata",
+      "category": "Dairy",
+      "unit": "pc",
+      "stock": 4,
+      "par": 16,
+      "costPerUnit": 3.6,
+      "supplierId": "sp4"
+    },
+    {
+      "id": "i7",
+      "name": "Unsalted butter",
+      "category": "Dairy",
+      "unit": "kg",
+      "stock": 11,
+      "par": 8,
+      "costPerUnit": 8.2,
+      "supplierId": "sp4"
+    },
+    {
+      "id": "i8",
+      "name": "Double cream",
+      "category": "Dairy",
+      "unit": "L",
+      "stock": 5,
+      "par": 8,
+      "costPerUnit": 4.1,
+      "supplierId": "sp4"
+    },
+    {
+      "id": "i9",
+      "name": "Ribeye, dry-aged",
+      "category": "Meat",
+      "unit": "kg",
+      "stock": 6.5,
+      "par": 10,
+      "costPerUnit": 38.0,
+      "supplierId": "sp2"
+    },
+    {
+      "id": "i10",
+      "name": "Whole chicken",
+      "category": "Meat",
+      "unit": "pc",
+      "stock": 14,
+      "par": 20,
+      "costPerUnit": 9.5,
+      "supplierId": "sp2"
+    },
+    {
+      "id": "i11",
+      "name": "Pork belly",
+      "category": "Meat",
+      "unit": "kg",
+      "stock": 7,
+      "par": 6,
+      "costPerUnit": 12.4,
+      "supplierId": "sp2"
+    },
+    {
+      "id": "i12",
+      "name": "Lamb shoulder",
+      "category": "Meat",
+      "unit": "kg",
+      "stock": 5,
+      "par": 6,
+      "costPerUnit": 16.9,
+      "supplierId": "sp2"
+    },
+    {
+      "id": "i13",
+      "name": "Octopus",
+      "category": "Seafood",
+      "unit": "kg",
+      "stock": 3,
+      "par": 5,
+      "costPerUnit": 24.0,
+      "supplierId": "sp3"
+    },
+    {
+      "id": "i14",
+      "name": "Market fish",
+      "category": "Seafood",
+      "unit": "kg",
+      "stock": 0,
+      "par": 6,
+      "costPerUnit": 27.5,
+      "supplierId": "sp3"
+    },
+    {
+      "id": "i15",
+      "name": "Peaches",
+      "category": "Produce",
+      "unit": "kg",
+      "stock": 2,
+      "par": 4,
+      "costPerUnit": 5.2,
+      "supplierId": "sp1"
+    },
+    {
+      "id": "i16",
+      "name": "Broccolini",
+      "category": "Produce",
+      "unit": "bunch",
+      "stock": 18,
+      "par": 15,
+      "costPerUnit": 2.1,
+      "supplierId": "sp1"
+    },
+    {
+      "id": "i17",
+      "name": "Wild mushrooms",
+      "category": "Produce",
+      "unit": "kg",
+      "stock": 2.5,
+      "par": 3,
+      "costPerUnit": 19.0,
+      "supplierId": "sp1"
+    },
+    {
+      "id": "i18",
+      "name": "Butternut squash",
+      "category": "Produce",
+      "unit": "pc",
+      "stock": 12,
+      "par": 10,
+      "costPerUnit": 1.8,
+      "supplierId": "sp1"
+    },
+    {
+      "id": "i19",
+      "name": "Lemons",
+      "category": "Produce",
+      "unit": "pc",
+      "stock": 40,
+      "par": 60,
+      "costPerUnit": 0.3,
+      "supplierId": "sp1"
+    },
+    {
+      "id": "i20",
+      "name": "Potatoes (Maris Piper)",
+      "category": "Produce",
+      "unit": "kg",
+      "stock": 45,
+      "par": 40,
+      "costPerUnit": 0.9,
+      "supplierId": "sp1"
+    },
+    {
+      "id": "i21",
+      "name": "Montepulciano (case)",
+      "category": "Drinks",
+      "unit": "case",
+      "stock": 4,
+      "par": 6,
+      "costPerUnit": 72.0,
+      "supplierId": "sp5"
+    },
+    {
+      "id": "i22",
+      "name": "Pinot Grigio (case)",
+      "category": "Drinks",
+      "unit": "case",
+      "stock": 5,
+      "par": 6,
+      "costPerUnit": 68.0,
+      "supplierId": "sp5"
+    },
+    {
+      "id": "i23",
+      "name": "Campari",
+      "category": "Drinks",
+      "unit": "bottle",
+      "stock": 2,
+      "par": 3,
+      "costPerUnit": 24.0,
+      "supplierId": "sp5"
+    },
+    {
+      "id": "i24",
+      "name": "Local pilsner keg",
+      "category": "Drinks",
+      "unit": "keg",
+      "stock": 1,
+      "par": 2,
+      "costPerUnit": 145.0,
+      "supplierId": "sp5"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "sp1",
+      "name": "Greenfield Produce",
+      "contact": "Martha Greene",
+      "phone": "+1 555 0301",
+      "email": "orders@greenfield.example",
+      "category": "Produce",
+      "deliveryDays": "Mon, Wed, Fri"
+    },
+    {
+      "id": "sp2",
+      "name": "Hartley Butchers",
+      "contact": "Jim Hartley",
+      "phone": "+1 555 0302",
+      "email": "jim@hartley.example",
+      "category": "Meat",
+      "deliveryDays": "Tue, Fri"
+    },
+    {
+      "id": "sp3",
+      "name": "Harbour Fish Co.",
+      "contact": "Ana Lopes",
+      "phone": "+1 555 0303",
+      "email": "ana@harbourfish.example",
+      "category": "Seafood",
+      "deliveryDays": "Daily"
+    },
+    {
+      "id": "sp4",
+      "name": "Valle Dairy",
+      "contact": "Giulia Valle",
+      "phone": "+1 555 0304",
+      "email": "hello@valledairy.example",
+      "category": "Dairy",
+      "deliveryDays": "Tue, Thu, Sat"
+    },
+    {
+      "id": "sp5",
+      "name": "Cellar & Still",
+      "contact": "Owen Price",
+      "phone": "+1 555 0305",
+      "email": "trade@cellarstill.example",
+      "category": "Drinks",
+      "deliveryDays": "Thu"
+    },
+    {
+      "id": "sp6",
+      "name": "Mill Lane Dry Goods",
+      "contact": "Sara Bell",
+      "phone": "+1 555 0306",
+      "email": "sara@milllane.example",
+      "category": "Dry goods",
+      "deliveryDays": "Mon"
+    }
+  ],
+  "purchaseOrders": [
+    {
+      "id": "po118",
+      "supplierId": "sp3",
+      "date": "2026-10-13",
+      "status": "sent",
+      "items": [
+        {
+          "inventoryId": "i14",
+          "qty": 6
+        },
+        {
+          "inventoryId": "i13",
+          "qty": 3
+        }
+      ],
+      "expected": "2026-10-14"
+    },
+    {
+      "id": "po117",
+      "supplierId": "sp4",
+      "date": "2026-10-12",
+      "status": "sent",
+      "items": [
+        {
+          "inventoryId": "i6",
+          "qty": 16
+        },
+        {
+          "inventoryId": "i5",
+          "qty": 6
+        }
+      ],
+      "expected": "2026-10-13"
+    },
+    {
+      "id": "po116",
+      "supplierId": "sp2",
+      "date": "2026-10-10",
+      "status": "received",
+      "items": [
+        {
+          "inventoryId": "i9",
+          "qty": 8
+        },
+        {
+          "inventoryId": "i10",
+          "qty": 12
+        }
+      ],
+      "expected": "2026-10-12"
+    },
+    {
+      "id": "po115",
+      "supplierId": "sp1",
+      "date": "2026-10-08",
+      "status": "received",
+      "items": [
+        {
+          "inventoryId": "i19",
+          "qty": 60
+        },
+        {
+          "inventoryId": "i20",
+          "qty": 40
+        }
+      ],
+      "expected": "2026-10-09"
+    }
+  ],
+  "staff": [
+    {
+      "id": "s2",
+      "name": "Tomás Herrera",
+      "role": "Head chef",
+      "hourlyRate": 30,
+      "phone": "+1 555 0111",
+      "email": "tomas@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T14:00",
+      "salesToday": 0
+    },
+    {
+      "id": "s3",
+      "name": "Priya Nair",
+      "role": "Sous chef",
+      "hourlyRate": 24,
+      "phone": "+1 555 0112",
+      "email": "priya@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T14:30",
+      "salesToday": 0
+    },
+    {
+      "id": "s4",
+      "name": "Jonah Okafor",
+      "role": "Line cook",
+      "hourlyRate": 19,
+      "phone": "+1 555 0113",
+      "email": "jonah@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T16:00",
+      "salesToday": 0
+    },
+    {
+      "id": "s5",
+      "name": "Lena Fischer",
+      "role": "Line cook",
+      "hourlyRate": 19,
+      "phone": "+1 555 0114",
+      "email": "lena@emberandoak.example",
+      "status": "off",
+      "clockedInAt": null,
+      "salesToday": 0
+    },
+    {
+      "id": "s6",
+      "name": "Sam Whitaker",
+      "role": "Server",
+      "hourlyRate": 15,
+      "phone": "+1 555 0115",
+      "email": "sam@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T16:30",
+      "salesToday": 167
+    },
+    {
+      "id": "s7",
+      "name": "Aiko Tanaka",
+      "role": "Server",
+      "hourlyRate": 15,
+      "phone": "+1 555 0116",
+      "email": "aiko@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T16:30",
+      "salesToday": 478
+    },
+    {
+      "id": "s8",
+      "name": "Daniel Brooks",
+      "role": "Server",
+      "hourlyRate": 15,
+      "phone": "+1 555 0117",
+      "email": "daniel@emberandoak.example",
+      "status": "break",
+      "clockedInAt": "2026-10-13T17:00",
+      "salesToday": 467
+    },
+    {
+      "id": "s9",
+      "name": "Chloé Martin",
+      "role": "Server",
+      "hourlyRate": 15,
+      "phone": "+1 555 0118",
+      "email": "chloe@emberandoak.example",
+      "status": "off",
+      "clockedInAt": null,
+      "salesToday": 133
+    },
+    {
+      "id": "s10",
+      "name": "Rafael Costa",
+      "role": "Bartender",
+      "hourlyRate": 17,
+      "phone": "+1 555 0119",
+      "email": "rafael@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T16:00",
+      "salesToday": 0
+    },
+    {
+      "id": "s11",
+      "name": "Grace Mensah",
+      "role": "Host",
+      "hourlyRate": 14,
+      "phone": "+1 555 0120",
+      "email": "grace@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T17:00",
+      "salesToday": 0
+    },
+    {
+      "id": "s12",
+      "name": "Ivan Petrov",
+      "role": "Dishwasher",
+      "hourlyRate": 13,
+      "phone": "+1 555 0121",
+      "email": "ivan@emberandoak.example",
+      "status": "on-shift",
+      "clockedInAt": "2026-10-13T17:30",
+      "salesToday": 0
+    }
+  ],
+  "shifts": [
+    {
+      "id": "sh6",
+      "staffId": "s2",
+      "day": 1,
+      "start": "14:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh7",
+      "staffId": "s2",
+      "day": 2,
+      "start": "14:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh8",
+      "staffId": "s2",
+      "day": 3,
+      "start": "14:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh9",
+      "staffId": "s2",
+      "day": 4,
+      "start": "14:00",
+      "end": "23:30"
+    },
+    {
+      "id": "sh10",
+      "staffId": "s2",
+      "day": 5,
+      "start": "12:00",
+      "end": "23:30"
+    },
+    {
+      "id": "sh11",
+      "staffId": "s3",
+      "day": 0,
+      "start": "14:30",
+      "end": "22:30"
+    },
+    {
+      "id": "sh12",
+      "staffId": "s3",
+      "day": 1,
+      "start": "14:30",
+      "end": "22:30"
+    },
+    {
+      "id": "sh13",
+      "staffId": "s3",
+      "day": 4,
+      "start": "14:30",
+      "end": "23:00"
+    },
+    {
+      "id": "sh14",
+      "staffId": "s3",
+      "day": 5,
+      "start": "11:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh15",
+      "staffId": "s3",
+      "day": 6,
+      "start": "11:00",
+      "end": "21:00"
+    },
+    {
+      "id": "sh16",
+      "staffId": "s4",
+      "day": 1,
+      "start": "16:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh17",
+      "staffId": "s4",
+      "day": 2,
+      "start": "16:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh18",
+      "staffId": "s4",
+      "day": 3,
+      "start": "16:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh19",
+      "staffId": "s4",
+      "day": 5,
+      "start": "12:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh20",
+      "staffId": "s4",
+      "day": 6,
+      "start": "12:00",
+      "end": "21:00"
+    },
+    {
+      "id": "sh21",
+      "staffId": "s5",
+      "day": 0,
+      "start": "16:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh22",
+      "staffId": "s5",
+      "day": 3,
+      "start": "16:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh23",
+      "staffId": "s5",
+      "day": 4,
+      "start": "16:00",
+      "end": "23:30"
+    },
+    {
+      "id": "sh24",
+      "staffId": "s5",
+      "day": 5,
+      "start": "12:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh25",
+      "staffId": "s5",
+      "day": 6,
+      "start": "12:00",
+      "end": "21:00"
+    },
+    {
+      "id": "sh26",
+      "staffId": "s6",
+      "day": 1,
+      "start": "16:30",
+      "end": "23:00"
+    },
+    {
+      "id": "sh27",
+      "staffId": "s6",
+      "day": 2,
+      "start": "16:30",
+      "end": "23:00"
+    },
+    {
+      "id": "sh28",
+      "staffId": "s6",
+      "day": 4,
+      "start": "16:30",
+      "end": "23:30"
+    },
+    {
+      "id": "sh29",
+      "staffId": "s6",
+      "day": 5,
+      "start": "11:30",
+      "end": "17:00"
+    },
+    {
+      "id": "sh30",
+      "staffId": "s7",
+      "day": 0,
+      "start": "16:30",
+      "end": "23:00"
+    },
+    {
+      "id": "sh31",
+      "staffId": "s7",
+      "day": 1,
+      "start": "16:30",
+      "end": "23:00"
+    },
+    {
+      "id": "sh32",
+      "staffId": "s7",
+      "day": 3,
+      "start": "16:30",
+      "end": "23:00"
+    },
+    {
+      "id": "sh33",
+      "staffId": "s7",
+      "day": 5,
+      "start": "17:00",
+      "end": "23:30"
+    },
+    {
+      "id": "sh34",
+      "staffId": "s7",
+      "day": 6,
+      "start": "11:30",
+      "end": "17:00"
+    },
+    {
+      "id": "sh35",
+      "staffId": "s8",
+      "day": 1,
+      "start": "17:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh36",
+      "staffId": "s8",
+      "day": 2,
+      "start": "17:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh37",
+      "staffId": "s8",
+      "day": 4,
+      "start": "17:00",
+      "end": "23:30"
+    },
+    {
+      "id": "sh38",
+      "staffId": "s8",
+      "day": 6,
+      "start": "11:30",
+      "end": "21:00"
+    },
+    {
+      "id": "sh39",
+      "staffId": "s9",
+      "day": 0,
+      "start": "17:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh40",
+      "staffId": "s9",
+      "day": 3,
+      "start": "17:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh41",
+      "staffId": "s9",
+      "day": 4,
+      "start": "17:00",
+      "end": "23:30"
+    },
+    {
+      "id": "sh42",
+      "staffId": "s9",
+      "day": 5,
+      "start": "11:30",
+      "end": "23:00"
+    },
+    {
+      "id": "sh43",
+      "staffId": "s10",
+      "day": 1,
+      "start": "16:00",
+      "end": "00:00"
+    },
+    {
+      "id": "sh44",
+      "staffId": "s10",
+      "day": 2,
+      "start": "16:00",
+      "end": "00:00"
+    },
+    {
+      "id": "sh45",
+      "staffId": "s10",
+      "day": 4,
+      "start": "16:00",
+      "end": "01:00"
+    },
+    {
+      "id": "sh46",
+      "staffId": "s10",
+      "day": 5,
+      "start": "16:00",
+      "end": "01:00"
+    },
+    {
+      "id": "sh47",
+      "staffId": "s11",
+      "day": 1,
+      "start": "17:00",
+      "end": "22:00"
+    },
+    {
+      "id": "sh48",
+      "staffId": "s11",
+      "day": 3,
+      "start": "17:00",
+      "end": "22:00"
+    },
+    {
+      "id": "sh49",
+      "staffId": "s11",
+      "day": 4,
+      "start": "17:00",
+      "end": "23:00"
+    },
+    {
+      "id": "sh50",
+      "staffId": "s11",
+      "day": 5,
+      "start": "11:30",
+      "end": "22:00"
+    },
+    {
+      "id": "sh51",
+      "staffId": "s12",
+      "day": 1,
+      "start": "17:30",
+      "end": "00:00"
+    },
+    {
+      "id": "sh52",
+      "staffId": "s12",
+      "day": 2,
+      "start": "17:30",
+      "end": "00:00"
+    },
+    {
+      "id": "sh53",
+      "staffId": "s12",
+      "day": 4,
+      "start": "17:30",
+      "end": "00:30"
+    },
+    {
+      "id": "sh54",
+      "staffId": "s12",
+      "day": 5,
+      "start": "17:30",
+      "end": "00:30"
+    },
+    {
+      "id": "sh55",
+      "staffId": "s12",
+      "day": 6,
+      "start": "12:00",
+      "end": "21:30"
+    }
+  ],
+  "sales": {
+    "daily": [
+      {
+        "date": "2026-07-16",
+        "revenue": 5164.47,
+        "covers": 114,
+        "orders": 48,
+        "foodCost": 1486.49,
+        "laborCost": 1756.09,
+        "categories": {
+          "Starters": 907.43,
+          "Wood-fired": 927.03,
+          "Mains": 1774.6,
+          "Sides": 340.49,
+          "Desserts": 405.21,
+          "Drinks": 864.14
+        }
+      },
+      {
+        "date": "2026-07-17",
+        "revenue": 6211.61,
+        "covers": 133,
+        "orders": 55,
+        "foodCost": 1712.18,
+        "laborCost": 2394.42,
+        "categories": {
+          "Starters": 1047.25,
+          "Wood-fired": 1228.16,
+          "Mains": 2002.42,
+          "Sides": 374.0,
+          "Desserts": 476.6,
+          "Drinks": 1153.29
+        }
+      },
+      {
+        "date": "2026-07-18",
+        "revenue": 7600.66,
+        "covers": 149,
+        "orders": 62,
+        "foodCost": 2375.05,
+        "laborCost": 2715.82,
+        "categories": {
+          "Starters": 1184.62,
+          "Wood-fired": 1378.25,
+          "Mains": 2711.83,
+          "Sides": 426.99,
+          "Desserts": 639.16,
+          "Drinks": 1374.75
+        }
+      },
+      {
+        "date": "2026-07-19",
+        "revenue": 6047.69,
+        "covers": 128,
+        "orders": 53,
+        "foodCost": 1688.32,
+        "laborCost": 2331.41,
+        "categories": {
+          "Starters": 1035.63,
+          "Wood-fired": 1152.46,
+          "Mains": 1993.59,
+          "Sides": 350.31,
+          "Desserts": 462.44,
+          "Drinks": 1089.71
+        }
+      },
+      {
+        "date": "2026-07-20",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-07-21",
+        "revenue": 3310.1,
+        "covers": 75,
+        "orders": 31,
+        "foodCost": 895.64,
+        "laborCost": 1471.01,
+        "categories": {
+          "Starters": 516.41,
+          "Wood-fired": 598.8,
+          "Mains": 1115.97,
+          "Sides": 187.58,
+          "Desserts": 252.33,
+          "Drinks": 520.14
+        }
+      },
+      {
+        "date": "2026-07-22",
+        "revenue": 4465.14,
+        "covers": 87,
+        "orders": 36,
+        "foodCost": 1246.03,
+        "laborCost": 1832.32,
+        "categories": {
+          "Starters": 777.55,
+          "Wood-fired": 770.87,
+          "Mains": 1535.25,
+          "Sides": 291.38,
+          "Desserts": 390.73,
+          "Drinks": 722.93
+        }
+      },
+      {
+        "date": "2026-07-23",
+        "revenue": 5259.11,
+        "covers": 109,
+        "orders": 45,
+        "foodCost": 1429.68,
+        "laborCost": 1754.15,
+        "categories": {
+          "Starters": 841.46,
+          "Wood-fired": 988.38,
+          "Mains": 1795.26,
+          "Sides": 301.06,
+          "Desserts": 446.28,
+          "Drinks": 982.47
+        }
+      },
+      {
+        "date": "2026-07-24",
+        "revenue": 7203.59,
+        "covers": 139,
+        "orders": 58,
+        "foodCost": 2141.59,
+        "laborCost": 2701.07,
+        "categories": {
+          "Starters": 1228.1,
+          "Wood-fired": 1299.07,
+          "Mains": 2352.01,
+          "Sides": 445.9,
+          "Desserts": 593.59,
+          "Drinks": 1262.94
+        }
+      },
+      {
+        "date": "2026-07-25",
+        "revenue": 8316.75,
+        "covers": 179,
+        "orders": 75,
+        "foodCost": 2656.97,
+        "laborCost": 3113.98,
+        "categories": {
+          "Starters": 1333.31,
+          "Wood-fired": 1494.72,
+          "Mains": 2579.1,
+          "Sides": 537.12,
+          "Desserts": 695.79,
+          "Drinks": 1311.97
+        }
+      },
+      {
+        "date": "2026-07-26",
+        "revenue": 5558.37,
+        "covers": 126,
+        "orders": 52,
+        "foodCost": 1641.37,
+        "laborCost": 2202.95,
+        "categories": {
+          "Starters": 968.63,
+          "Wood-fired": 1136.32,
+          "Mains": 1808.85,
+          "Sides": 303.85,
+          "Desserts": 459.36,
+          "Drinks": 922.41
+        }
+      },
+      {
+        "date": "2026-07-27",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-07-28",
+        "revenue": 4062.4,
+        "covers": 82,
+        "orders": 34,
+        "foodCost": 1296.9,
+        "laborCost": 1528.23,
+        "categories": {
+          "Starters": 627.8,
+          "Wood-fired": 723.28,
+          "Mains": 1278.67,
+          "Sides": 219.55,
+          "Desserts": 316.16,
+          "Drinks": 666.98
+        }
+      },
+      {
+        "date": "2026-07-29",
+        "revenue": 4033.67,
+        "covers": 79,
+        "orders": 33,
+        "foodCost": 1139.14,
+        "laborCost": 1647.93,
+        "categories": {
+          "Starters": 647.03,
+          "Wood-fired": 717.8,
+          "Mains": 1287.27,
+          "Sides": 221.88,
+          "Desserts": 308.43,
+          "Drinks": 707.12
+        }
+      },
+      {
+        "date": "2026-07-30",
+        "revenue": 4851.49,
+        "covers": 96,
+        "orders": 40,
+        "foodCost": 1542.2,
+        "laborCost": 1931.15,
+        "categories": {
+          "Starters": 766.01,
+          "Wood-fired": 937.79,
+          "Mains": 1567.04,
+          "Sides": 279.43,
+          "Desserts": 398.18,
+          "Drinks": 756.21
+        }
+      },
+      {
+        "date": "2026-07-31",
+        "revenue": 6546.23,
+        "covers": 128,
+        "orders": 53,
+        "foodCost": 1969.99,
+        "laborCost": 2148.35,
+        "categories": {
+          "Starters": 1176.08,
+          "Wood-fired": 1267.8,
+          "Mains": 2274.45,
+          "Sides": 410.11,
+          "Desserts": 523.09,
+          "Drinks": 1064.82
+        }
+      },
+      {
+        "date": "2026-08-01",
+        "revenue": 8701.02,
+        "covers": 175,
+        "orders": 73,
+        "foodCost": 2596.59,
+        "laborCost": 3137.38,
+        "categories": {
+          "Starters": 1483.01,
+          "Wood-fired": 1629.8,
+          "Mains": 2986.79,
+          "Sides": 522.64,
+          "Desserts": 753.14,
+          "Drinks": 1553.98
+        }
+      },
+      {
+        "date": "2026-08-02",
+        "revenue": 5147.14,
+        "covers": 104,
+        "orders": 43,
+        "foodCost": 1553.7,
+        "laborCost": 2063.97,
+        "categories": {
+          "Starters": 927.16,
+          "Wood-fired": 1019.26,
+          "Mains": 1853.49,
+          "Sides": 317.65,
+          "Desserts": 377.6,
+          "Drinks": 794.84
+        }
+      },
+      {
+        "date": "2026-08-03",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-08-04",
+        "revenue": 3761.28,
+        "covers": 79,
+        "orders": 33,
+        "foodCost": 1028.73,
+        "laborCost": 1603.45,
+        "categories": {
+          "Starters": 581.97,
+          "Wood-fired": 645.87,
+          "Mains": 1249.03,
+          "Sides": 214.15,
+          "Desserts": 286.69,
+          "Drinks": 633.91
+        }
+      },
+      {
+        "date": "2026-08-05",
+        "revenue": 4428.82,
+        "covers": 99,
+        "orders": 41,
+        "foodCost": 1363.29,
+        "laborCost": 1603.03,
+        "categories": {
+          "Starters": 756.81,
+          "Wood-fired": 882.83,
+          "Mains": 1453.87,
+          "Sides": 282.16,
+          "Desserts": 378.83,
+          "Drinks": 712.96
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "revenue": 5292.78,
+        "covers": 111,
+        "orders": 46,
+        "foodCost": 1481.53,
+        "laborCost": 1978.31,
+        "categories": {
+          "Starters": 961.95,
+          "Wood-fired": 920.5,
+          "Mains": 1890.0,
+          "Sides": 304.06,
+          "Desserts": 385.04,
+          "Drinks": 923.67
+        }
+      },
+      {
+        "date": "2026-08-07",
+        "revenue": 6643.66,
+        "covers": 135,
+        "orders": 56,
+        "foodCost": 1826.85,
+        "laborCost": 2208.59,
+        "categories": {
+          "Starters": 1172.99,
+          "Wood-fired": 1292.88,
+          "Mains": 2031.68,
+          "Sides": 397.22,
+          "Desserts": 529.98,
+          "Drinks": 1236.15
+        }
+      },
+      {
+        "date": "2026-08-08",
+        "revenue": 8096.37,
+        "covers": 163,
+        "orders": 68,
+        "foodCost": 2220.78,
+        "laborCost": 2753.1,
+        "categories": {
+          "Starters": 1317.35,
+          "Wood-fired": 1527.82,
+          "Mains": 2814.57,
+          "Sides": 533.71,
+          "Desserts": 654.07,
+          "Drinks": 1324.54
+        }
+      },
+      {
+        "date": "2026-08-09",
+        "revenue": 5041.12,
+        "covers": 113,
+        "orders": 47,
+        "foodCost": 1379.91,
+        "laborCost": 1722.56,
+        "categories": {
+          "Starters": 858.12,
+          "Wood-fired": 1052.56,
+          "Mains": 1827.92,
+          "Sides": 295.62,
+          "Desserts": 436.89,
+          "Drinks": 930.78
+        }
+      },
+      {
+        "date": "2026-08-10",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-08-11",
+        "revenue": 4010.22,
+        "covers": 87,
+        "orders": 36,
+        "foodCost": 1182.59,
+        "laborCost": 1668.6,
+        "categories": {
+          "Starters": 662.59,
+          "Wood-fired": 777.69,
+          "Mains": 1358.22,
+          "Sides": 230.01,
+          "Desserts": 295.97,
+          "Drinks": 663.36
+        }
+      },
+      {
+        "date": "2026-08-12",
+        "revenue": 4029.25,
+        "covers": 89,
+        "orders": 37,
+        "foodCost": 1112.26,
+        "laborCost": 1521.05,
+        "categories": {
+          "Starters": 746.61,
+          "Wood-fired": 793.36,
+          "Mains": 1304.5,
+          "Sides": 252.74,
+          "Desserts": 316.94,
+          "Drinks": 668.0
+        }
+      },
+      {
+        "date": "2026-08-13",
+        "revenue": 4810.74,
+        "covers": 103,
+        "orders": 43,
+        "foodCost": 1314.53,
+        "laborCost": 1762.18,
+        "categories": {
+          "Starters": 801.18,
+          "Wood-fired": 994.45,
+          "Mains": 1490.94,
+          "Sides": 260.46,
+          "Desserts": 403.33,
+          "Drinks": 777.46
+        }
+      },
+      {
+        "date": "2026-08-14",
+        "revenue": 6914.74,
+        "covers": 155,
+        "orders": 65,
+        "foodCost": 2086.51,
+        "laborCost": 2249.91,
+        "categories": {
+          "Starters": 1275.52,
+          "Wood-fired": 1380.98,
+          "Mains": 2443.54,
+          "Sides": 396.68,
+          "Desserts": 503.57,
+          "Drinks": 1213.59
+        }
+      },
+      {
+        "date": "2026-08-15",
+        "revenue": 8738.15,
+        "covers": 184,
+        "orders": 77,
+        "foodCost": 2534.08,
+        "laborCost": 3187.57,
+        "categories": {
+          "Starters": 1430.7,
+          "Wood-fired": 1750.96,
+          "Mains": 3048.04,
+          "Sides": 516.71,
+          "Desserts": 633.2,
+          "Drinks": 1563.22
+        }
+      },
+      {
+        "date": "2026-08-16",
+        "revenue": 5520.93,
+        "covers": 121,
+        "orders": 50,
+        "foodCost": 1624.69,
+        "laborCost": 2167.86,
+        "categories": {
+          "Starters": 859.83,
+          "Wood-fired": 1139.92,
+          "Mains": 1789.44,
+          "Sides": 338.87,
+          "Desserts": 409.75,
+          "Drinks": 1007.91
+        }
+      },
+      {
+        "date": "2026-08-17",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-08-18",
+        "revenue": 3765.39,
+        "covers": 83,
+        "orders": 35,
+        "foodCost": 1061.59,
+        "laborCost": 1486.36,
+        "categories": {
+          "Starters": 629.22,
+          "Wood-fired": 684.2,
+          "Mains": 1181.88,
+          "Sides": 236.71,
+          "Desserts": 310.44,
+          "Drinks": 628.11
+        }
+      },
+      {
+        "date": "2026-08-19",
+        "revenue": 4271.0,
+        "covers": 95,
+        "orders": 40,
+        "foodCost": 1224.25,
+        "laborCost": 1717.45,
+        "categories": {
+          "Starters": 746.87,
+          "Wood-fired": 742.54,
+          "Mains": 1409.6,
+          "Sides": 272.24,
+          "Desserts": 345.12,
+          "Drinks": 719.24
+        }
+      },
+      {
+        "date": "2026-08-20",
+        "revenue": 5176.9,
+        "covers": 107,
+        "orders": 45,
+        "foodCost": 1450.09,
+        "laborCost": 1733.27,
+        "categories": {
+          "Starters": 835.03,
+          "Wood-fired": 919.62,
+          "Mains": 1727.47,
+          "Sides": 299.39,
+          "Desserts": 403.24,
+          "Drinks": 934.52
+        }
+      },
+      {
+        "date": "2026-08-21",
+        "revenue": 7341.78,
+        "covers": 156,
+        "orders": 65,
+        "foodCost": 2114.49,
+        "laborCost": 2641.8,
+        "categories": {
+          "Starters": 1309.47,
+          "Wood-fired": 1314.03,
+          "Mains": 2311.46,
+          "Sides": 462.72,
+          "Desserts": 587.12,
+          "Drinks": 1266.64
+        }
+      },
+      {
+        "date": "2026-08-22",
+        "revenue": 8454.18,
+        "covers": 168,
+        "orders": 70,
+        "foodCost": 2414.52,
+        "laborCost": 3060.01,
+        "categories": {
+          "Starters": 1537.42,
+          "Wood-fired": 1475.41,
+          "Mains": 3011.28,
+          "Sides": 495.54,
+          "Desserts": 696.06,
+          "Drinks": 1417.62
+        }
+      },
+      {
+        "date": "2026-08-23",
+        "revenue": 6032.41,
+        "covers": 134,
+        "orders": 56,
+        "foodCost": 1909.33,
+        "laborCost": 2340.36,
+        "categories": {
+          "Starters": 1010.17,
+          "Wood-fired": 1206.6,
+          "Mains": 2111.83,
+          "Sides": 395.84,
+          "Desserts": 481.61,
+          "Drinks": 937.96
+        }
+      },
+      {
+        "date": "2026-08-24",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-08-25",
+        "revenue": 4010.6,
+        "covers": 84,
+        "orders": 35,
+        "foodCost": 1248.38,
+        "laborCost": 1619.56,
+        "categories": {
+          "Starters": 674.84,
+          "Wood-fired": 805.16,
+          "Mains": 1250.39,
+          "Sides": 223.89,
+          "Desserts": 351.13,
+          "Drinks": 628.47
+        }
+      },
+      {
+        "date": "2026-08-26",
+        "revenue": 5115.91,
+        "covers": 100,
+        "orders": 42,
+        "foodCost": 1564.2,
+        "laborCost": 2054.8,
+        "categories": {
+          "Starters": 797.52,
+          "Wood-fired": 1025.85,
+          "Mains": 1519.89,
+          "Sides": 283.97,
+          "Desserts": 414.95,
+          "Drinks": 789.27
+        }
+      },
+      {
+        "date": "2026-08-27",
+        "revenue": 5449.54,
+        "covers": 113,
+        "orders": 47,
+        "foodCost": 1542.46,
+        "laborCost": 2098.43,
+        "categories": {
+          "Starters": 914.83,
+          "Wood-fired": 1090.05,
+          "Mains": 1654.28,
+          "Sides": 313.92,
+          "Desserts": 474.64,
+          "Drinks": 869.3
+        }
+      },
+      {
+        "date": "2026-08-28",
+        "revenue": 6134.08,
+        "covers": 127,
+        "orders": 53,
+        "foodCost": 1823.97,
+        "laborCost": 1987.43,
+        "categories": {
+          "Starters": 1146.32,
+          "Wood-fired": 1113.87,
+          "Mains": 1949.9,
+          "Sides": 393.03,
+          "Desserts": 465.44,
+          "Drinks": 1048.27
+        }
+      },
+      {
+        "date": "2026-08-29",
+        "revenue": 8068.34,
+        "covers": 164,
+        "orders": 68,
+        "foodCost": 2349.63,
+        "laborCost": 2686.86,
+        "categories": {
+          "Starters": 1249.63,
+          "Wood-fired": 1439.2,
+          "Mains": 2867.49,
+          "Sides": 498.35,
+          "Desserts": 591.39,
+          "Drinks": 1296.96
+        }
+      },
+      {
+        "date": "2026-08-30",
+        "revenue": 6047.12,
+        "covers": 122,
+        "orders": 51,
+        "foodCost": 1653.11,
+        "laborCost": 2162.08,
+        "categories": {
+          "Starters": 1072.9,
+          "Wood-fired": 1117.32,
+          "Mains": 1954.19,
+          "Sides": 327.03,
+          "Desserts": 463.66,
+          "Drinks": 1098.97
+        }
+      },
+      {
+        "date": "2026-08-31",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-09-01",
+        "revenue": 3909.89,
+        "covers": 78,
+        "orders": 32,
+        "foodCost": 1174.94,
+        "laborCost": 1641.93,
+        "categories": {
+          "Starters": 623.99,
+          "Wood-fired": 737.7,
+          "Mains": 1229.63,
+          "Sides": 252.86,
+          "Desserts": 288.33,
+          "Drinks": 681.11
+        }
+      },
+      {
+        "date": "2026-09-02",
+        "revenue": 4769.33,
+        "covers": 93,
+        "orders": 39,
+        "foodCost": 1386.77,
+        "laborCost": 1857.01,
+        "categories": {
+          "Starters": 738.86,
+          "Wood-fired": 923.35,
+          "Mains": 1706.69,
+          "Sides": 260.65,
+          "Desserts": 345.19,
+          "Drinks": 826.37
+        }
+      },
+      {
+        "date": "2026-09-03",
+        "revenue": 4854.91,
+        "covers": 102,
+        "orders": 42,
+        "foodCost": 1469.21,
+        "laborCost": 1820.63,
+        "categories": {
+          "Starters": 860.33,
+          "Wood-fired": 888.16,
+          "Mains": 1478.18,
+          "Sides": 266.79,
+          "Desserts": 362.42,
+          "Drinks": 774.28
+        }
+      },
+      {
+        "date": "2026-09-04",
+        "revenue": 6741.72,
+        "covers": 145,
+        "orders": 60,
+        "foodCost": 1847.49,
+        "laborCost": 2331.14,
+        "categories": {
+          "Starters": 1197.75,
+          "Wood-fired": 1367.81,
+          "Mains": 2440.56,
+          "Sides": 399.85,
+          "Desserts": 497.16,
+          "Drinks": 1049.42
+        }
+      },
+      {
+        "date": "2026-09-05",
+        "revenue": 8970.47,
+        "covers": 185,
+        "orders": 77,
+        "foodCost": 2738.35,
+        "laborCost": 2835.22,
+        "categories": {
+          "Starters": 1603.91,
+          "Wood-fired": 1663.53,
+          "Mains": 3119.36,
+          "Sides": 517.64,
+          "Desserts": 761.26,
+          "Drinks": 1399.25
+        }
+      },
+      {
+        "date": "2026-09-06",
+        "revenue": 5898.78,
+        "covers": 124,
+        "orders": 52,
+        "foodCost": 1712.05,
+        "laborCost": 2068.76,
+        "categories": {
+          "Starters": 967.36,
+          "Wood-fired": 1173.96,
+          "Mains": 1936.68,
+          "Sides": 363.25,
+          "Desserts": 448.12,
+          "Drinks": 1027.94
+        }
+      },
+      {
+        "date": "2026-09-07",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-09-08",
+        "revenue": 4235.84,
+        "covers": 84,
+        "orders": 35,
+        "foodCost": 1345.68,
+        "laborCost": 1494.24,
+        "categories": {
+          "Starters": 657.01,
+          "Wood-fired": 755.71,
+          "Mains": 1275.62,
+          "Sides": 259.52,
+          "Desserts": 329.58,
+          "Drinks": 696.33
+        }
+      },
+      {
+        "date": "2026-09-09",
+        "revenue": 4902.15,
+        "covers": 99,
+        "orders": 41,
+        "foodCost": 1339.59,
+        "laborCost": 1938.01,
+        "categories": {
+          "Starters": 904.07,
+          "Wood-fired": 893.67,
+          "Mains": 1689.4,
+          "Sides": 299.75,
+          "Desserts": 416.15,
+          "Drinks": 907.78
+        }
+      },
+      {
+        "date": "2026-09-10",
+        "revenue": 5022.18,
+        "covers": 101,
+        "orders": 42,
+        "foodCost": 1480.67,
+        "laborCost": 1688.83,
+        "categories": {
+          "Starters": 847.92,
+          "Wood-fired": 1006.95,
+          "Mains": 1753.38,
+          "Sides": 326.25,
+          "Desserts": 427.07,
+          "Drinks": 791.05
+        }
+      },
+      {
+        "date": "2026-09-11",
+        "revenue": 7521.1,
+        "covers": 162,
+        "orders": 68,
+        "foodCost": 2254.72,
+        "laborCost": 2604.98,
+        "categories": {
+          "Starters": 1327.71,
+          "Wood-fired": 1329.35,
+          "Mains": 2350.99,
+          "Sides": 483.87,
+          "Desserts": 596.97,
+          "Drinks": 1351.17
+        }
+      },
+      {
+        "date": "2026-09-12",
+        "revenue": 7516.4,
+        "covers": 166,
+        "orders": 69,
+        "foodCost": 2068.97,
+        "laborCost": 2372.23,
+        "categories": {
+          "Starters": 1254.21,
+          "Wood-fired": 1470.83,
+          "Mains": 2471.33,
+          "Sides": 455.01,
+          "Desserts": 560.51,
+          "Drinks": 1259.02
+        }
+      },
+      {
+        "date": "2026-09-13",
+        "revenue": 5799.67,
+        "covers": 127,
+        "orders": 53,
+        "foodCost": 1824.36,
+        "laborCost": 1983.29,
+        "categories": {
+          "Starters": 970.38,
+          "Wood-fired": 1209.58,
+          "Mains": 2094.61,
+          "Sides": 325.24,
+          "Desserts": 429.91,
+          "Drinks": 978.24
+        }
+      },
+      {
+        "date": "2026-09-14",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-09-15",
+        "revenue": 4316.43,
+        "covers": 86,
+        "orders": 36,
+        "foodCost": 1221.62,
+        "laborCost": 1635.04,
+        "categories": {
+          "Starters": 771.89,
+          "Wood-fired": 866.01,
+          "Mains": 1365.71,
+          "Sides": 247.56,
+          "Desserts": 329.27,
+          "Drinks": 697.7
+        }
+      },
+      {
+        "date": "2026-09-16",
+        "revenue": 3991.91,
+        "covers": 87,
+        "orders": 36,
+        "foodCost": 1182.86,
+        "laborCost": 1599.43,
+        "categories": {
+          "Starters": 648.95,
+          "Wood-fired": 820.29,
+          "Mains": 1235.19,
+          "Sides": 218.67,
+          "Desserts": 303.49,
+          "Drinks": 644.14
+        }
+      },
+      {
+        "date": "2026-09-17",
+        "revenue": 4866.56,
+        "covers": 102,
+        "orders": 42,
+        "foodCost": 1527.34,
+        "laborCost": 1724.64,
+        "categories": {
+          "Starters": 750.71,
+          "Wood-fired": 833.01,
+          "Mains": 1728.93,
+          "Sides": 276.29,
+          "Desserts": 385.3,
+          "Drinks": 806.45
+        }
+      },
+      {
+        "date": "2026-09-18",
+        "revenue": 6442.12,
+        "covers": 132,
+        "orders": 55,
+        "foodCost": 1989.0,
+        "laborCost": 2354.72,
+        "categories": {
+          "Starters": 1166.99,
+          "Wood-fired": 1149.13,
+          "Mains": 1945.25,
+          "Sides": 387.51,
+          "Desserts": 482.15,
+          "Drinks": 1117.73
+        }
+      },
+      {
+        "date": "2026-09-19",
+        "revenue": 7463.15,
+        "covers": 152,
+        "orders": 63,
+        "foodCost": 2029.32,
+        "laborCost": 2702.95,
+        "categories": {
+          "Starters": 1321.95,
+          "Wood-fired": 1375.37,
+          "Mains": 2235.0,
+          "Sides": 433.46,
+          "Desserts": 542.62,
+          "Drinks": 1395.58
+        }
+      },
+      {
+        "date": "2026-09-20",
+        "revenue": 6920.96,
+        "covers": 137,
+        "orders": 57,
+        "foodCost": 2040.17,
+        "laborCost": 2413.69,
+        "categories": {
+          "Starters": 1251.59,
+          "Wood-fired": 1291.05,
+          "Mains": 2225.36,
+          "Sides": 425.31,
+          "Desserts": 506.94,
+          "Drinks": 1066.31
+        }
+      },
+      {
+        "date": "2026-09-21",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-09-22",
+        "revenue": 4230.81,
+        "covers": 84,
+        "orders": 35,
+        "foodCost": 1351.37,
+        "laborCost": 1677.79,
+        "categories": {
+          "Starters": 742.83,
+          "Wood-fired": 748.32,
+          "Mains": 1405.66,
+          "Sides": 261.62,
+          "Desserts": 331.54,
+          "Drinks": 686.32
+        }
+      },
+      {
+        "date": "2026-09-23",
+        "revenue": 4130.21,
+        "covers": 93,
+        "orders": 39,
+        "foodCost": 1248.25,
+        "laborCost": 1566.82,
+        "categories": {
+          "Starters": 736.59,
+          "Wood-fired": 844.96,
+          "Mains": 1339.55,
+          "Sides": 223.93,
+          "Desserts": 348.04,
+          "Drinks": 744.58
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "revenue": 5720.48,
+        "covers": 111,
+        "orders": 46,
+        "foodCost": 1765.64,
+        "laborCost": 1919.37,
+        "categories": {
+          "Starters": 959.68,
+          "Wood-fired": 1012.24,
+          "Mains": 1741.85,
+          "Sides": 315.12,
+          "Desserts": 464.76,
+          "Drinks": 946.17
+        }
+      },
+      {
+        "date": "2026-09-25",
+        "revenue": 6003.62,
+        "covers": 133,
+        "orders": 55,
+        "foodCost": 1725.42,
+        "laborCost": 2008.94,
+        "categories": {
+          "Starters": 1083.17,
+          "Wood-fired": 1117.13,
+          "Mains": 2010.07,
+          "Sides": 391.0,
+          "Desserts": 503.08,
+          "Drinks": 953.6
+        }
+      },
+      {
+        "date": "2026-09-26",
+        "revenue": 7125.88,
+        "covers": 160,
+        "orders": 67,
+        "foodCost": 1939.49,
+        "laborCost": 2688.04,
+        "categories": {
+          "Starters": 1183.23,
+          "Wood-fired": 1422.58,
+          "Mains": 2488.94,
+          "Sides": 453.61,
+          "Desserts": 547.45,
+          "Drinks": 1293.12
+        }
+      },
+      {
+        "date": "2026-09-27",
+        "revenue": 5863.34,
+        "covers": 120,
+        "orders": 50,
+        "foodCost": 1834.23,
+        "laborCost": 2159.37,
+        "categories": {
+          "Starters": 1023.95,
+          "Wood-fired": 1021.86,
+          "Mains": 2017.06,
+          "Sides": 365.04,
+          "Desserts": 505.76,
+          "Drinks": 1024.74
+        }
+      },
+      {
+        "date": "2026-09-28",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-09-29",
+        "revenue": 4055.63,
+        "covers": 89,
+        "orders": 37,
+        "foodCost": 1125.33,
+        "laborCost": 1710.04,
+        "categories": {
+          "Starters": 685.73,
+          "Wood-fired": 780.65,
+          "Mains": 1215.69,
+          "Sides": 264.68,
+          "Desserts": 302.16,
+          "Drinks": 670.04
+        }
+      },
+      {
+        "date": "2026-09-30",
+        "revenue": 4690.7,
+        "covers": 103,
+        "orders": 43,
+        "foodCost": 1373.37,
+        "laborCost": 1878.35,
+        "categories": {
+          "Starters": 858.64,
+          "Wood-fired": 952.28,
+          "Mains": 1601.26,
+          "Sides": 290.89,
+          "Desserts": 362.06,
+          "Drinks": 779.85
+        }
+      },
+      {
+        "date": "2026-10-01",
+        "revenue": 6001.45,
+        "covers": 122,
+        "orders": 51,
+        "foodCost": 1621.44,
+        "laborCost": 2354.65,
+        "categories": {
+          "Starters": 981.11,
+          "Wood-fired": 1083.09,
+          "Mains": 1936.6,
+          "Sides": 350.54,
+          "Desserts": 480.46,
+          "Drinks": 954.7
+        }
+      },
+      {
+        "date": "2026-10-02",
+        "revenue": 7088.61,
+        "covers": 149,
+        "orders": 62,
+        "foodCost": 2041.01,
+        "laborCost": 2404.32,
+        "categories": {
+          "Starters": 1233.64,
+          "Wood-fired": 1432.76,
+          "Mains": 2496.69,
+          "Sides": 451.73,
+          "Desserts": 555.79,
+          "Drinks": 1100.73
+        }
+      },
+      {
+        "date": "2026-10-03",
+        "revenue": 8982.5,
+        "covers": 187,
+        "orders": 78,
+        "foodCost": 2461.19,
+        "laborCost": 3188.33,
+        "categories": {
+          "Starters": 1575.0,
+          "Wood-fired": 1549.88,
+          "Mains": 2745.03,
+          "Sides": 584.45,
+          "Desserts": 691.83,
+          "Drinks": 1594.33
+        }
+      },
+      {
+        "date": "2026-10-04",
+        "revenue": 6841.85,
+        "covers": 139,
+        "orders": 58,
+        "foodCost": 1892.32,
+        "laborCost": 2583.07,
+        "categories": {
+          "Starters": 1229.24,
+          "Wood-fired": 1176.68,
+          "Mains": 2062.0,
+          "Sides": 419.88,
+          "Desserts": 568.43,
+          "Drinks": 1072.3
+        }
+      },
+      {
+        "date": "2026-10-05",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-10-06",
+        "revenue": 4190.5,
+        "covers": 83,
+        "orders": 35,
+        "foodCost": 1184.28,
+        "laborCost": 1564.52,
+        "categories": {
+          "Starters": 754.41,
+          "Wood-fired": 825.83,
+          "Mains": 1444.01,
+          "Sides": 237.41,
+          "Desserts": 357.57,
+          "Drinks": 728.12
+        }
+      },
+      {
+        "date": "2026-10-07",
+        "revenue": 5072.81,
+        "covers": 99,
+        "orders": 41,
+        "foodCost": 1429.87,
+        "laborCost": 1831.12,
+        "categories": {
+          "Starters": 854.86,
+          "Wood-fired": 916.44,
+          "Mains": 1829.49,
+          "Sides": 303.16,
+          "Desserts": 413.28,
+          "Drinks": 882.36
+        }
+      },
+      {
+        "date": "2026-10-08",
+        "revenue": 5053.37,
+        "covers": 107,
+        "orders": 45,
+        "foodCost": 1558.53,
+        "laborCost": 1711.06,
+        "categories": {
+          "Starters": 882.54,
+          "Wood-fired": 917.55,
+          "Mains": 1610.19,
+          "Sides": 295.73,
+          "Desserts": 427.89,
+          "Drinks": 818.58
+        }
+      },
+      {
+        "date": "2026-10-09",
+        "revenue": 8535.32,
+        "covers": 165,
+        "orders": 69,
+        "foodCost": 2670.1,
+        "laborCost": 3040.07,
+        "categories": {
+          "Starters": 1437.38,
+          "Wood-fired": 1628.67,
+          "Mains": 2922.97,
+          "Sides": 552.69,
+          "Desserts": 648.96,
+          "Drinks": 1461.36
+        }
+      },
+      {
+        "date": "2026-10-10",
+        "revenue": 8038.01,
+        "covers": 171,
+        "orders": 71,
+        "foodCost": 2555.28,
+        "laborCost": 2636.65,
+        "categories": {
+          "Starters": 1330.65,
+          "Wood-fired": 1419.15,
+          "Mains": 2562.8,
+          "Sides": 441.9,
+          "Desserts": 608.32,
+          "Drinks": 1397.99
+        }
+      },
+      {
+        "date": "2026-10-11",
+        "revenue": 5949.51,
+        "covers": 128,
+        "orders": 53,
+        "foodCost": 1672.3,
+        "laborCost": 2048.05,
+        "categories": {
+          "Starters": 1105.67,
+          "Wood-fired": 1214.12,
+          "Mains": 2131.58,
+          "Sides": 385.22,
+          "Desserts": 498.14,
+          "Drinks": 1061.4
+        }
+      },
+      {
+        "date": "2026-10-12",
+        "revenue": 0,
+        "covers": 0,
+        "orders": 0,
+        "foodCost": 0,
+        "laborCost": 0,
+        "categories": {
+          "Starters": 0,
+          "Wood-fired": 0,
+          "Mains": 0,
+          "Sides": 0,
+          "Desserts": 0,
+          "Drinks": 0
+        }
+      },
+      {
+        "date": "2026-10-13",
+        "revenue": 2820,
+        "covers": 61,
+        "orders": 24,
+        "foodCost": 817.8,
+        "laborCost": 1210.0,
+        "categories": {
+          "Starters": 479.4,
+          "Wood-fired": 535.8,
+          "Mains": 930.6,
+          "Sides": 169.2,
+          "Desserts": 225.6,
+          "Drinks": 479.4
+        }
+      }
+    ],
+    "hourlyToday": [
+      {
+        "hour": 12,
+        "revenue": 412
+      },
+      {
+        "hour": 13,
+        "revenue": 655
+      },
+      {
+        "hour": 14,
+        "revenue": 298
+      },
+      {
+        "hour": 15,
+        "revenue": 84
+      },
+      {
+        "hour": 16,
+        "revenue": 61
+      },
+      {
+        "hour": 17,
+        "revenue": 386
+      },
+      {
+        "hour": 18,
+        "revenue": 924
+      },
+      {
+        "hour": 19,
+        "revenue": 0
+      },
+      {
+        "hour": 20,
+        "revenue": 0
+      },
+      {
+        "hour": 21,
+        "revenue": 0
+      },
+      {
+        "hour": 22,
+        "revenue": 0
+      }
+    ],
+    "hourlyLastWeek": [
+      {
+        "hour": 12,
+        "revenue": 380
+      },
+      {
+        "hour": 13,
+        "revenue": 590
+      },
+      {
+        "hour": 14,
+        "revenue": 340
+      },
+      {
+        "hour": 15,
+        "revenue": 120
+      },
+      {
+        "hour": 16,
+        "revenue": 95
+      },
+      {
+        "hour": 17,
+        "revenue": 410
+      },
+      {
+        "hour": 18,
+        "revenue": 1120
+      },
+      {
+        "hour": 19,
+        "revenue": 1490
+      },
+      {
+        "hour": 20,
+        "revenue": 1310
+      },
+      {
+        "hour": 21,
+        "revenue": 760
+      },
+      {
+        "hour": 22,
+        "revenue": 280
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "k1",
+      "text": "Call Harbour Fish Co. about tomorrow's market fish",
+      "due": "2026-10-13",
+      "done": false,
+      "priority": "high"
+    },
+    {
+      "id": "k2",
+      "text": "Approve next week's rota",
+      "due": "2026-10-14",
+      "done": false,
+      "priority": "normal"
+    },
+    {
+      "id": "k3",
+      "text": "Update the autumn dessert on the website",
+      "due": "2026-10-15",
+      "done": false,
+      "priority": "normal"
+    },
+    {
+      "id": "k4",
+      "text": "Fire extinguisher inspection",
+      "due": "2026-10-12",
+      "done": false,
+      "priority": "high"
+    },
+    {
+      "id": "k5",
+      "text": "Order new menu card printing",
+      "due": "2026-10-11",
+      "done": true,
+      "priority": "normal"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg1",
+      "from": "s2",
+      "text": "Market fish didn't arrive — 86'd for tonight.",
+      "time": "2026-10-13T16:12",
+      "read": false
+    },
+    {
+      "id": "msg2",
+      "from": "s11",
+      "text": "Party of 8 at 20:30 asked for the long table by the window.",
+      "time": "2026-10-13T15:40",
+      "read": false
+    },
+    {
+      "id": "msg3",
+      "from": "s10",
+      "text": "We're down to the last keg of pilsner.",
+      "time": "2026-10-13T14:05",
+      "read": true
+    }
+  ],
+  "website": {
+    "status": {
+      "updatedAt": "2026-10-12T10:20",
+      "publishedAt": "2026-10-10T09:15"
+    },
+    "general": {
+      "siteTitle": "Ember & Oak — Wood-fired bistro",
+      "tagline": "Seasonal cooking over live fire",
+      "domain": "emberandoak.example",
+      "logoText": "Ember & Oak",
+      "language": "en",
+      "maintenanceMode": false
+    },
+    "announcement": {
+      "enabled": true,
+      "text": "Autumn menu is here — book a table for our harvest supper on Oct 30.",
+      "linkLabel": "Book now",
+      "link": "/book"
+    },
+    "hero": {
+      "heading": "Seasonal cooking over live fire",
+      "subheading": "A neighbourhood bistro serving wood-fired plates, natural wines and long dinners with friends.",
+      "primaryCtaLabel": "Book a table",
+      "primaryCtaLink": "/book",
+      "secondaryCtaLabel": "See the menu",
+      "secondaryCtaLink": "/menu",
+      "image": "images/dashboard/banner_bg.jpg"
+    },
+    "about": {
+      "heading": "Our story",
+      "body": "Ember & Oak started in 2019 with a second-hand oven and a simple idea: cook what's in season, cook it over fire, and make people feel at home.\n\nToday we work with a handful of local farms and fishermen, bake our own sourdough every morning and change the menu whenever the market does.",
+      "image": "images/dashboard/img_1.jpg"
+    },
+    "menuDisplay": {
+      "showPrices": true,
+      "showDietaryTags": true,
+      "featuredItemIds": [
+        "m7",
+        "m10",
+        "m13",
+        "m18"
+      ],
+      "note": "Please tell your server about any allergies. A discretionary 12.5% service charge is added to tables of 6 or more."
+    },
+    "posts": [
+      {
+        "id": "p1",
+        "type": "event",
+        "title": "Harvest supper",
+        "date": "2026-10-30",
+        "status": "published",
+        "excerpt": "Five courses celebrating the autumn harvest, paired with natural wines.",
+        "body": "Join us for a long-table harvest supper with our friends from Greenfield Produce. Five courses, wine pairing optional.\n\nTickets are limited to 40 seats."
+      },
+      {
+        "id": "p2",
+        "type": "news",
+        "title": "Our autumn menu is here",
+        "date": "2026-10-07",
+        "status": "published",
+        "excerpt": "Squash, wild mushrooms and quince make their way onto the menu.",
+        "body": "Autumn is our favourite season to cook. This year's menu brings back the squash risotto, a new wild mushroom pizza and burnt basque cheesecake with poached quince."
+      },
+      {
+        "id": "p3",
+        "type": "event",
+        "title": "Sunday wine club",
+        "date": "2026-11-08",
+        "status": "draft",
+        "excerpt": "Monthly tasting of six natural wines with small plates.",
+        "body": "Draft — confirm the wine list with Cellar & Still."
+      },
+      {
+        "id": "p4",
+        "type": "news",
+        "title": "We're hiring a pastry chef",
+        "date": "2026-09-29",
+        "status": "published",
+        "excerpt": "Love laminated dough and seasonal fruit? Come and work with us.",
+        "body": "We're looking for a full-time pastry chef to join our kitchen team. Email jobs@emberandoak.example."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "g1",
+        "url": "images/dashboard/img_1.jpg",
+        "caption": "The dining room"
+      },
+      {
+        "id": "g2",
+        "url": "images/dashboard/img_2.jpg",
+        "caption": "Wood-fired oven"
+      },
+      {
+        "id": "g3",
+        "url": "images/dashboard/img_3.jpg",
+        "caption": "Autumn tasting menu"
+      },
+      {
+        "id": "g4",
+        "url": "images/auth/login-bg.jpg",
+        "caption": "Terrace at dusk"
+      }
+    ],
+    "faqs": [
+      {
+        "id": "f1",
+        "q": "Do you take walk-ins?",
+        "a": "Yes — we keep the bar and terrace for walk-ins. Join the waitlist at the host stand."
+      },
+      {
+        "id": "f2",
+        "q": "Can you cater for allergies?",
+        "a": "Most dishes can be adapted. Please let us know when booking and tell your server."
+      },
+      {
+        "id": "f3",
+        "q": "Do you host private events?",
+        "a": "The main room can be booked for up to 40 guests. Email events@emberandoak.example."
+      },
+      {
+        "id": "f4",
+        "q": "Is there parking?",
+        "a": "There's a public car park two minutes' walk away on Mill Lane."
+      }
+    ],
+    "pages": [
+      {
+        "id": "pg1",
+        "title": "Home",
+        "path": "/",
+        "visible": true,
+        "inNav": true
+      },
+      {
+        "id": "pg2",
+        "title": "Menu",
+        "path": "/menu",
+        "visible": true,
+        "inNav": true
+      },
+      {
+        "id": "pg3",
+        "title": "About",
+        "path": "/about",
+        "visible": true,
+        "inNav": true
+      },
+      {
+        "id": "pg4",
+        "title": "Events & news",
+        "path": "/news",
+        "visible": true,
+        "inNav": true
+      },
+      {
+        "id": "pg5",
+        "title": "Gallery",
+        "path": "/gallery",
+        "visible": true,
+        "inNav": false
+      },
+      {
+        "id": "pg6",
+        "title": "Private dining",
+        "path": "/private-dining",
+        "visible": false,
+        "inNav": false
+      },
+      {
+        "id": "pg7",
+        "title": "Contact",
+        "path": "/contact",
+        "visible": true,
+        "inNav": true
+      }
+    ],
+    "contact": {
+      "address": "14 Mill Lane, Riverside",
+      "phone": "+1 555 0100",
+      "email": "hello@emberandoak.example",
+      "mapUrl": "https://maps.example/ember-and-oak",
+      "bookingUrl": "https://book.example/ember-and-oak"
+    },
+    "social": {
+      "instagram": "@emberandoak",
+      "facebook": "emberandoak",
+      "tiktok": "",
+      "tripadvisor": "ember-and-oak-riverside"
+    },
+    "seo": {
+      "title": "Ember & Oak | Wood-fired bistro in Riverside",
+      "description": "Seasonal cooking over live fire. Wood-fired pizza, grilled meats and fish, natural wines. Book a table online.",
+      "keywords": "restaurant, wood-fired, bistro, Riverside, pizza, natural wine",
+      "ogImage": "images/dashboard/banner_bg.jpg"
+    }
+  }
+}

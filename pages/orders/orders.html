@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mise — Orders</title>
+  <script src="../../js/mise/auth.js"></script>
+  <script src="../../js/mise/theme.js"></script>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../css/mise.css">
+  <!-- endinject -->
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+</head>
+<body data-page-title="Orders" data-page-sub="Tickets moving through the kitchen">
+  <div class="container-scroller">
+    <div data-mise-slot="navbar"></div>
+    <div class="container-fluid page-body-wrapper">
+      <div data-mise-slot="sidebar"></div>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+                <div class="d-sm-flex align-items-center justify-content-between border-bottom pb-2 mise-toolbar">
+                  <ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active ps-0" href="#board-anchor">Live board</a></li><li class="nav-item"><a class="nav-link border-0" href="#history-anchor">History</a></li></ul>
+                  <div class="btn-wrapper d-flex flex-wrap gap-2 align-items-center"><button class="btn btn-primary text-white me-0" id="new-order"><i class="mdi mdi-plus"></i> New order</button></div>
+                </div>
+                <div class="tab-content tab-content-basic">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="statistics-details d-flex align-items-center justify-content-between mise-kpi" id="stats"></div>
+                    </div>
+                  </div>
+                  <div class="mb-4" id="board-anchor"><div class="mise-board" id="board"></div></div>
+                  <div class="row">
+                    <div class="col-12" id="history-anchor grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Order history</h4>
+                              <p class="card-subtitle card-subtitle-dash" id="history-count"></p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"><input type="search" class="form-control" id="order-search" placeholder="Search orders" style="max-width:200px"><select class="form-select" id="status-filter" style="max-width:150px"><option value="all">All statuses</option><option value="new">New</option><option value="preparing">Preparing</option><option value="ready">Ready</option><option value="served">Served</option><option value="paid">Paid</option><option value="cancelled">Cancelled</option></select><select class="form-select" id="type-filter" style="max-width:150px"><option value="all">All types</option><option value="dine-in">Dine-in</option><option value="takeaway">Takeaway</option><option value="delivery">Delivery</option></select></div>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table select-table mise-table">
+                              <thead><tr><th>Order</th><th>Table</th><th>Server / guest</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead>
+                              <tbody id="history"></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <div data-mise-slot="footer"></div>
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/chart.js/Chart.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/mise/app.js"></script>
+  <script src="../../js/mise/layout.js"></script>
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/mise/pages/orders.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mise — Settings</title>
+  <script src="../../js/mise/auth.js"></script>
+  <script src="../../js/mise/theme.js"></script>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../css/mise.css">
+  <!-- endinject -->
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+</head>
+<body data-page-title="Settings" data-page-sub="Restaurant details and your data">
+  <div class="container-scroller">
+    <div data-mise-slot="navbar"></div>
+    <div class="container-fluid page-body-wrapper">
+      <div data-mise-slot="sidebar"></div>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+                <div class="tab-content tab-content-basic pt-0">
+                  <div class="row">
+                  <div class="col-lg-7 d-flex flex-column">
+                    <div class="row flex-grow mise-stack">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Restaurant</h4>
+                              <p class="card-subtitle card-subtitle-dash" id="capacity"></p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <div id="restaurant-form"></div>
+                          <button class="btn btn-primary text-white" id="save-restaurant">Save restaurant details</button>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 d-flex flex-column">
+                    <div class="row flex-grow mise-stack">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Data</h4>
+                              <p class="card-subtitle card-subtitle-dash" id="storage-size"></p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <p class="text-muted small">Everything lives in <code>data/data.json</code>. Changes you make here are saved in this browser. Export to get an updated <code>data.json</code> you can put back in the <code>data</code> folder.</p>
+                          <div class="mb-3" id="data-counts"></div>
+                          <div class="d-flex flex-wrap gap-2 mb-3"><button class="btn btn-primary text-white" id="export-data"><i class="mdi mdi-download"></i> Export data.json</button><label class="btn btn-otline-dark mb-0"><i class="mdi mdi-upload"></i> Import<input type="file" accept="application/json,.json" class="d-none" id="import-data"></label><button class="btn btn-otline-dark text-danger" id="reset-data"><i class="mdi mdi-restore"></i> Reset to file</button></div>
+                          <div class="form-check form-switch mise-switch"><input class="form-check-input" type="checkbox" id="keep-current"><label class="form-check-label" for="keep-current">Keep sample dates current</label><small class="text-muted d-block">Moves the dates in data.json so "today" in the data is always today. Turn off once you use real data.</small></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Your profile &amp; appearance</h4>
+                              <p class="card-subtitle card-subtitle-dash">Personal details, light/dark mode, themes and dashboard preferences live on your profile.</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <a class="btn btn-otline-dark" href="../profile/profile.html"><i class="mdi mdi-account-circle-outline"></i> Open profile</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <div data-mise-slot="footer"></div>
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/chart.js/Chart.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/mise/app.js"></script>
+  <script src="../../js/mise/layout.js"></script>
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/mise/pages/settings.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

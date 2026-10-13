@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mise — Sign in</title>
+  <script src="../../js/mise/auth.js"></script>
+  <script src="../../js/mise/theme.js"></script>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../css/mise.css">
+  <!-- endinject -->
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+</head>
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-center auth px-0">
+        <div class="row w-100 mx-0">
+          <div class="col-lg-4 col-md-6 mx-auto">
+            <div class="auth-form-light mise-auth text-left py-5 px-4 px-sm-5">
+              <div class="brand-logo">
+                <span class="mise-brand">mise<span>.</span></span>
+              </div>
+              <h4>Welcome back</h4>
+              <h6 class="fw-light">Sign in to run tonight's service.</h6>
+              <form class="pt-3" id="login-form" novalidate>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg" id="login-user" placeholder="Username" autocomplete="username" aria-label="Username" autocapitalize="none" spellcheck="false" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-control-lg" id="login-password" placeholder="Password" autocomplete="current-password" aria-label="Password" required>
+                </div>
+                <div class="alert alert-danger py-2 small d-none" id="login-error" role="alert"></div>
+                <div class="mt-3 d-grid gap-2">
+                  <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn text-white" id="login-submit">SIGN IN</button>
+                  <button type="button" class="btn btn-block btn-otline-dark btn-lg font-weight-medium mise-admin-shortcut" id="login-admin"><i class="mdi mdi-shield-account me-1"></i> Sign in as admin</button>
+                </div>
+                <div class="my-2 d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input" id="login-remember" checked>
+                      Keep me signed in
+                    </label>
+                  </div>
+                  <a href="#" class="auth-link text-black" id="forgot-link">Forgot password?</a>
+                </div>
+                <div class="mise-alert alert small d-none mt-3" id="forgot-box">
+                  <p class="mb-2">There's no server to email a reset link, so passwords live in your data:</p>
+                  <ul class="ps-3 mb-2">
+                    <li>If you changed it on this device, you can drop this device's edits and go back to the password in <code>data.json</code>.</li>
+                    <li>Otherwise, set a new <code>user.passwordHash</code> in <code>data.json</code>, or delete it to go back to <strong>admin</strong> / <strong>admin</strong>.</li>
+                  </ul>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="forgot-reset">Drop this device's edits</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <script src="../../js/mise/app.js"></script>
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <!-- endinject -->
+  <script>
+    (function () {
+      'use strict';
+      var DEFAULT_USER = 'admin';
+      var DEFAULT_HASH = '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'; // sha256("admin")
+      var params = new URLSearchParams(location.search);
+      var SAFE = /^(index\.html|pages\/[a-z]+\/[a-z]+\.html)([?#][\w=&.-]*)?$/;
+
+      function destination() {
+        var next = params.get('next');
+        if (next && SAFE.test(next)) return next;
+        var prefs = Mise.data && Mise.data.user && Mise.data.user.prefs;
+        if (prefs && prefs.startPage && SAFE.test(prefs.startPage)) return prefs.startPage;
+        return 'index.html';
+      }
+
+      if (params.get('signout')) {
+        MiseAuth.signOut();
+        history.replaceState(null, '', location.pathname);
+      } else if (MiseAuth.session()) {
+        // Already signed in on this device.
+        Mise.loaded.then(function () { location.replace('../../' + destination()); });
+        return;
+      }
+
+      function fail(msg) {
+        $('#login-error').text(msg).removeClass('d-none');
+        $('#login-submit').prop('disabled', false).text('SIGN IN');
+        $('#login-password').val('').trigger('focus');
+      }
+
+      $('#login-form').on('submit', function (e) {
+        e.preventDefault();
+        var user = $.trim($('#login-user').val()).toLowerCase();
+        var pass = $('#login-password').val();
+        if (!user || !pass) return fail('Enter your username and password.');
+        $('#login-submit').prop('disabled', true).text('SIGNING IN…');
+        Mise.loaded.then(function () {
+          var account = (Mise.data && Mise.data.user) || {};
+          var expectedUser = String(account.username || DEFAULT_USER).toLowerCase();
+          var expectedHash = account.passwordHash || DEFAULT_HASH;
+          return Mise.sha256(pass).then(function (hash) {
+            if (user !== expectedUser || hash !== expectedHash) return fail('That username and password don\'t match.');
+            MiseAuth.signIn(account.username || DEFAULT_USER, $('#login-remember').is(':checked'));
+            location.replace('../../' + destination());
+          });
+        });
+      });
+
+      // One-click admin sign-in. Works while the admin password is still the default;
+      // after you set your own password on Profile it only fills in the username.
+      $('#login-admin').on('click', function () {
+        Mise.loaded.then(function () {
+          var account = (Mise.data && Mise.data.user) || {};
+          $('#login-user').val(account.username || DEFAULT_USER);
+          if ((account.passwordHash || DEFAULT_HASH) === DEFAULT_HASH) {
+            $('#login-password').val('admin');
+            $('#login-form').trigger('submit');
+          } else {
+            $('#login-error').text('Your admin password has been changed. Enter it to sign in.').removeClass('d-none');
+            $('#login-password').val('').trigger('focus');
+          }
+        });
+      });
+
+      $('#forgot-link').on('click', function (e) { e.preventDefault(); $('#forgot-box').toggleClass('d-none'); });
+      $('#forgot-reset').on('click', function () {
+        if (!confirm('Drop every change saved on this device (orders, edits, password) and reload data.json?')) return;
+        try { ['mise.data', 'mise.sourceHash', 'mise.dirty'].forEach(function (k) { localStorage.removeItem(k); }); } catch (err) {}
+        location.replace(location.pathname);
+      });
+      $('#login-user').trigger('focus');
+    })();
+  </script>
+</body>
+</html>

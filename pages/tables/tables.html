@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mise — Tables</title>
+  <script src="../../js/mise/auth.js"></script>
+  <script src="../../js/mise/theme.js"></script>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../css/mise.css">
+  <!-- endinject -->
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+</head>
+<body data-page-title="Tables" data-page-sub="Live floor plan — tap a table to update it">
+  <div class="container-scroller">
+    <div data-mise-slot="navbar"></div>
+    <div class="container-fluid page-body-wrapper">
+      <div data-mise-slot="sidebar"></div>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+                <div class="d-sm-flex align-items-center justify-content-between border-bottom pb-2 mise-toolbar">
+                  <div class="mise-legend py-2" id="legend"></div>
+                  <div class="btn-wrapper d-flex flex-wrap gap-2 align-items-center"><button class="btn btn-otline-dark" id="reset-floor"><i class="mdi mdi-restore"></i> End of service</button><button class="btn btn-primary text-white me-0" id="add-table"><i class="mdi mdi-plus"></i> Add table</button></div>
+                </div>
+                <div class="tab-content tab-content-basic">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="statistics-details d-flex align-items-center justify-content-between mise-kpi" id="stats"></div>
+                    </div>
+                  </div>
+                  <div class="row" id="floor"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <div data-mise-slot="footer"></div>
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/chart.js/Chart.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/mise/app.js"></script>
+  <script src="../../js/mise/layout.js"></script>
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/mise/pages/tables.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

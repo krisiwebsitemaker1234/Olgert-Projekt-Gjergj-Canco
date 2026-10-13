@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mise — Profile</title>
+  <script src="../../js/mise/auth.js"></script>
+  <script src="../../js/mise/theme.js"></script>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../css/mise.css">
+  <!-- endinject -->
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+</head>
+<body data-page-title="Profile" data-page-sub="Your details, appearance and preferences">
+  <div class="container-scroller">
+    <div data-mise-slot="navbar"></div>
+    <div class="container-fluid page-body-wrapper">
+      <div data-mise-slot="sidebar"></div>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+                <div class="tab-content tab-content-basic pt-0">
+                  <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded"><div class="card-body" id="profile-head"></div></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-lg-7 d-flex flex-column">
+                    <div class="row flex-grow mise-stack">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Your details</h4>
+                              <p class="card-subtitle card-subtitle-dash">Shown in the top bar and on your profile</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <div id="details-form"></div>
+                          <button class="btn btn-primary text-white" id="save-details">Save details</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Dashboard preferences</h4>
+                              <p class="card-subtitle card-subtitle-dash">How the dashboard behaves for you</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <div id="prefs-form"></div>
+                          <div class="d-flex gap-2"><button class="btn btn-primary text-white" id="save-prefs">Save preferences</button><button class="btn btn-otline-dark" id="reset-prefs">Reset</button></div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 d-flex flex-column">
+                    <div class="row flex-grow mise-stack">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Appearance</h4>
+                              <p class="card-subtitle card-subtitle-dash">Saved in this browser</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <span id="appearance"></span><label class="form-label">Mode</label>
+                          <div class="d-flex flex-wrap gap-2 mb-4" id="mode-buttons"><button class="btn btn-sm" data-set-mode="light"><i class="mdi mdi-white-balance-sunny"></i> Light</button><button class="btn btn-sm" data-set-mode="dark"><i class="mdi mdi-weather-night"></i> Dark</button><button class="btn btn-sm" data-set-mode="system"><i class="mdi mdi-theme-light-dark"></i> Match system</button></div>
+                          <label class="form-label">Theme</label>
+                          <div class="mise-theme-cards mb-4" id="theme-cards"></div>
+                          <label class="form-label">Sidebar</label>
+                          <div class="d-flex gap-2 mb-4" id="sidebar-buttons"><button class="btn btn-sm" data-set-sidebar="light">Light</button><button class="btn btn-sm" data-set-sidebar="dark">Dark</button></div>
+                          <label class="form-label">Header colour</label>
+                          <div class="d-flex flex-wrap gap-2 mb-4" id="header-tiles"></div>
+                          <button class="btn btn-sm btn-otline-dark" id="reset-appearance">Reset to default</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Notifications</h4>
+                              <p class="card-subtitle card-subtitle-dash">What shows up under the bell</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <div id="alerts-form"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Sign-in</h4>
+                              <p class="card-subtitle card-subtitle-dash">Used on the sign-in page. Saved in data.json as a hash.</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <div id="login-form-fields"></div>
+                          <button class="btn btn-primary text-white" id="save-login">Update sign-in</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Session</h4>
+                              <p class="card-subtitle card-subtitle-dash">This device stays signed in until you sign out.</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <a class="btn btn-otline-dark text-danger" href="../samples/login.html?signout=1"><i class="mdi mdi-logout"></i> Sign out</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <div data-mise-slot="footer"></div>
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/chart.js/Chart.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/mise/app.js"></script>
+  <script src="../../js/mise/layout.js"></script>
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/mise/pages/profile.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

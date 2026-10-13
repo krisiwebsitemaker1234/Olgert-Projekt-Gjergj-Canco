@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mise — Inventory</title>
+  <script src="../../js/mise/auth.js"></script>
+  <script src="../../js/mise/theme.js"></script>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../css/mise.css">
+  <!-- endinject -->
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg" />
+</head>
+<body data-page-title="Inventory" data-page-sub="Stock levels, purchase orders and suppliers">
+  <div class="container-scroller">
+    <div data-mise-slot="navbar"></div>
+    <div class="container-fluid page-body-wrapper">
+      <div data-mise-slot="sidebar"></div>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+                <div class="d-sm-flex align-items-center justify-content-between border-bottom pb-2 mise-toolbar">
+                  <ul class="nav nav-tabs" role="tablist"><li class="nav-item"><a class="nav-link active ps-0" href="#" data-tab="stock">Stock</a></li><li class="nav-item"><a class="nav-link" href="#" data-tab="orders">Purchase orders</a></li><li class="nav-item"><a class="nav-link border-0" href="#" data-tab="suppliers">Suppliers</a></li></ul>
+                  <div class="btn-wrapper d-flex flex-wrap gap-2 align-items-center"><button class="btn btn-otline-dark" id="reorder"><i class="mdi mdi-cart-outline"></i> Reorder low stock</button><button class="btn btn-primary text-white me-0" id="add-item"><i class="mdi mdi-plus"></i> Add item</button></div>
+                </div>
+                <div class="tab-content tab-content-basic">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="statistics-details d-flex align-items-center justify-content-between mise-kpi" id="stats"></div>
+                    </div>
+                  </div>
+<div class="mise-pane" id="pane-stock">                  <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Stock</h4>
+                              <p class="card-subtitle card-subtitle-dash">Sorted by what is running out first</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"><input type="search" class="form-control" id="stock-search" placeholder="Search stock"><select class="form-select" id="cat-filter" style="max-width:170px"></select><div class="form-check form-switch mise-switch m-0"><input class="form-check-input" type="checkbox" id="low-only"><label class="form-check-label" for="low-only">Low only</label></div></div>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table select-table mise-table">
+                              <thead><tr><th>Item</th><th>On hand</th><th>Unit cost</th><th>Value</th><th>Supplier</th><th></th></tr></thead>
+                              <tbody id="stock"></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div></div>
+<div class="mise-pane d-none" id="pane-orders">                  <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Purchase orders</h4>
+                              <p class="card-subtitle card-subtitle-dash">Draft → sent → received. Receiving adds the quantities to stock.</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"></div>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table select-table mise-table">
+                              <thead><tr><th>PO</th><th>Supplier</th><th>Items</th><th>Total</th><th>Expected</th><th>Status</th><th></th></tr></thead>
+                              <tbody id="orders"></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div></div>
+<div class="mise-pane d-none" id="pane-suppliers">                  <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start mb-3">
+                            <div>
+                              <h4 class="card-title card-title-dash">Suppliers</h4>
+                              
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 align-items-center"><button class="btn btn-otline-dark" id="add-supplier"><i class="mdi mdi-plus"></i> Add supplier</button></div>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table select-table mise-table">
+                              <thead><tr><th>Supplier</th><th>Contact</th><th>Phone</th><th>Delivers</th><th></th></tr></thead>
+                              <tbody id="suppliers"></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <div data-mise-slot="footer"></div>
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/chart.js/Chart.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/mise/app.js"></script>
+  <script src="../../js/mise/layout.js"></script>
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/mise/pages/inventory.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
